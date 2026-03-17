@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { ShieldCheck, Award } from 'lucide-react';
 
 const partners = [
   {
@@ -87,15 +88,18 @@ export default function Partners() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-16 text-center"
+          className="mt-16 flex justify-center"
         >
-          <div className="inline-flex items-center justify-center p-1.5 rounded-full bg-white border border-slate-200 shadow-sm">
-            <span className="px-6 py-2.5 rounded-full bg-brand-50 text-sm font-semibold text-brand-700">
-              Authorized Distributors
-            </span>
-            <span className="px-6 py-2.5 text-sm font-medium text-slate-600">
-              100% Genuine Products
-            </span>
+          <div className="inline-flex flex-col sm:flex-row items-center gap-y-4 gap-x-8 px-8 py-4 rounded-2xl sm:rounded-full bg-white border border-slate-200 shadow-sm cursor-default">
+            <div className="flex items-center text-slate-800">
+              <Award className="w-5 h-5 text-blue-600 mr-2.5" />
+              <span className="text-sm font-bold tracking-wide uppercase">Authorized Distributors</span>
+            </div>
+            <div className="hidden sm:block w-px h-5 bg-slate-200"></div>
+            <div className="flex items-center text-slate-800">
+              <ShieldCheck className="w-5 h-5 text-emerald-500 mr-2.5" />
+              <span className="text-sm font-bold tracking-wide uppercase">100% Genuine Products</span>
+            </div>
           </div>
         </motion.div>
       </div>
