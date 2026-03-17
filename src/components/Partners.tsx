@@ -95,8 +95,8 @@ export default function Partners() {
               <CheckCircle2 className="w-6 h-6 text-emerald-600" strokeWidth={2.5} />
             </div>
             <div className="flex flex-col text-left">
-              <span className="text-base font-bold text-slate-900 leading-tight mb-0.5">Certified Experts</span>
-              <span className="text-sm text-slate-500 font-medium">Technical Support Team</span>
+              <span className="text-base font-bold text-slate-900 leading-tight mb-0.5">Shell Expert Solutions</span>
+              <span className="text-sm text-slate-500 font-medium">Authorized Service Provider</span>
             </div>
           </div>
         </motion.div>
