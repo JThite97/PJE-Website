@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ShieldCheck, Award } from 'lucide-react';
+import { ShieldCheck, Award, CheckCircle2 } from 'lucide-react';
 
 const partners = [
   {
@@ -90,15 +90,13 @@ export default function Partners() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="mt-16 flex justify-center"
         >
-          <div className="inline-flex flex-col sm:flex-row items-center gap-y-4 gap-x-8 px-8 py-4 rounded-2xl sm:rounded-full bg-white border border-slate-200 shadow-sm cursor-default">
-            <div className="flex items-center text-slate-800">
-              <Award className="w-5 h-5 text-blue-600 mr-2.5" />
-              <span className="text-sm font-bold tracking-wide uppercase">Authorized Distributors</span>
+          <div className="inline-flex items-center gap-4 px-6 py-4 rounded-2xl bg-white border border-slate-100 shadow-sm cursor-default">
+            <div className="flex-shrink-0 w-12 h-12 bg-emerald-50 rounded-full flex items-center justify-center">
+              <CheckCircle2 className="w-6 h-6 text-emerald-600" strokeWidth={2.5} />
             </div>
-            <div className="hidden sm:block w-px h-5 bg-slate-200"></div>
-            <div className="flex items-center text-slate-800">
-              <ShieldCheck className="w-5 h-5 text-emerald-500 mr-2.5" />
-              <span className="text-sm font-bold tracking-wide uppercase">100% Genuine Products</span>
+            <div className="flex flex-col text-left">
+              <span className="text-base font-bold text-slate-900 leading-tight mb-0.5">Certified Experts</span>
+              <span className="text-sm text-slate-500 font-medium">Technical Support Team</span>
             </div>
           </div>
         </motion.div>
