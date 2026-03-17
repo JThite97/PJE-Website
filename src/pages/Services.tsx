@@ -199,8 +199,8 @@ export default function Services() {
                     <CheckCircle2 size={24} />
                   </div>
                   <div>
-                    <div className="text-sm font-bold text-ink-900">Certified Experts</div>
-                    <div className="text-xs text-slate-500">Technical Support Team</div>
+                    <div className="text-sm font-bold text-ink-900">Shell Expert Solutions</div>
+                    <div className="text-xs text-slate-500">Technical Services</div>
                   </div>
                 </div>
               </motion.div>
