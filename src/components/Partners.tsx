@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 const partners = [
   {
     name: 'Shell',
-    logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/e/e8/Shell_logo.svg/1200px-Shell_logo.svg.png',
+    logo: '/shell-4.svg',
     description: 'Premium Industrial Lubricants',
   },
   {

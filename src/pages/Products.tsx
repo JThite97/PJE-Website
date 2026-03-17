@@ -6,7 +6,7 @@ const productBrands = [
   {
     name: 'Shell',
     description: 'Premium industrial lubricants, hydraulic fluids, and gear oils engineered for ultimate equipment protection.',
-    logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/e/e8/Shell_logo.svg/1200px-Shell_logo.svg.png',
+    logo: '/shell-4.svg',
     catalogUrl: '#',
   },
   {
