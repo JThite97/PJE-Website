@@ -45,8 +45,9 @@ export default function About() {
   return (
     <div className="w-full">
       <SEO 
-        title="About Us | PJ Enterprise" 
-        description="Learn about the history, mission, and vision of PJ Enterprise, your trusted industrial partner since 2007."
+        title="About Us | PJ Enterprise — Industrial Partner Since 2007, Vadodara" 
+        description="Learn about PJ Enterprise's 19+ year journey as Vadodara's trusted Shell distributor. Founded by Mr. Jigish Shah, serving 1500+ customers across Gujarat & Madhya Pradesh."
+        path="/about"
       />
       {/* Page Header */}
       <section className="bg-slate-900 pt-32 pb-20 text-center relative overflow-hidden">

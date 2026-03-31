@@ -29,7 +29,10 @@ export default function Navbar() {
   ];
 
   return (
+    // ✅ FIXED: Added role and aria-label for accessibility
     <nav
+      role="navigation"
+      aria-label="Main navigation"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? 'pt-4 px-4 sm:px-6 lg:px-8' : 'pt-6 px-4 sm:px-6 lg:px-8'
       }`}
@@ -83,9 +86,13 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
+            {/* ✅ FIXED: Added aria-label, aria-expanded, aria-controls for accessibility */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 rounded-lg transition-colors text-white hover:bg-white/10"
+              className="p-2 rounded-lg transition-colors text-white hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-electric"
+              aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-menu"
             >
               {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -100,6 +107,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
+            id="mobile-menu"
             className="md:hidden absolute top-full left-4 right-4 mt-2 bg-white rounded-2xl border border-slate-100 shadow-2xl overflow-hidden z-50 pointer-events-auto"
           >
             <div className="px-4 pt-4 pb-6 space-y-2">

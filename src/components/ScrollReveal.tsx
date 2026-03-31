@@ -1,9 +1,10 @@
+// ✅ FIXED: Respects prefers-reduced-motion — shows content immediately without animation
 import React, { useEffect, useRef } from 'react';
 
 interface ScrollRevealProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
   className?: string;
-  delay?: number; // Delay in milliseconds
+  delay?: number;
   key?: React.Key;
 }
 
@@ -13,6 +14,13 @@ export default function ScrollReveal({ children, className = '', delay = 0, ...p
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
+
+    // ✅ FIXED: Skip animation entirely if user prefers reduced motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+      element.classList.add('is-revealed');
+      return;
+    }
 
     const observer = new IntersectionObserver(
       ([entry]) => {

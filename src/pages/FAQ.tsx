@@ -31,6 +31,7 @@ export default function FAQ() {
       <SEO 
         title="Frequently Asked Questions (FAQ) | PJ Enterprise" 
         description="Find answers to common questions about PJ Enterprise's products, services, delivery areas, and technical support."
+        path="/faq"
       />
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

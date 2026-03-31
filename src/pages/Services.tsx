@@ -84,8 +84,9 @@ export default function Services() {
   return (
     <div className="w-full min-h-screen bg-paper">
       <SEO 
-        title="Technical Services | PJ Enterprise" 
-        description="Expert technical support, oil condition monitoring, and value-added industrial services to maximize your operational efficiency."
+        title="Shell LubeAnalyst & Industrial Services | PJ Enterprise Vadodara" 
+        description="Expert Shell lubricant services in Vadodara — oil condition monitoring (LubeAnalyst), technical consulting, fluid management & predictive maintenance for Gujarat industries."
+        path="/services"
       />
       {/* Page Header - Dark Immersive */}
       <section className="bg-ink-900 pt-32 pb-20 text-center relative overflow-hidden">

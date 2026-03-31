@@ -29,9 +29,11 @@ const industries = [
 export default function Home() {
   return (
     <div className="w-full">
+      {/* ✅ FIXED: Local SEO keywords for Vadodara visibility */}
       <SEO 
-        title="PJ Enterprise | Industrial Solutions & Shell Distributor"
-        description="Your trusted partner for premium industrial products. We provide top-tier solutions including Shell lubricants and Tyrolit precision tools."
+        title="PJ Enterprise | Shell Lubricants Distributor in Vadodara, Gujarat"
+        description="Authorized Shell oil distributor in Vadodara. Premium industrial lubricants, Tyrolit grinding tools, Quaker Houghton fluids & EWAC welding solutions. 19+ years serving Gujarat & MP."
+        path="/"
       />
       {/* Hero Section - Dark Immersive */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-ink-900">

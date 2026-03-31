@@ -33,8 +33,9 @@ export default function Products() {
   return (
     <div className="w-full min-h-screen bg-slate-50">
       <SEO 
-        title="Products & Brands | PJ Enterprise" 
-        description="Explore our comprehensive range of industrial solutions from world-leading brands like Shell, Tyrolit, Quaker Houghton, and EWAC Alloys."
+        title="Shell Oil, Tyrolit & Industrial Products | PJ Enterprise Vadodara" 
+        description="Authorized Shell lubricants, Tyrolit grinding tools, Quaker Houghton metalworking fluids & EWAC welding alloys. Buy industrial products in Vadodara, Gujarat."
+        path="/products"
       />
       {/* Page Header */}
       <section className="bg-slate-900 pt-32 pb-20 text-center relative overflow-hidden">

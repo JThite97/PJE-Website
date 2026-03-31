@@ -56,3 +56,37 @@ h1, h2 {
 h3, h4, h5, h6, .font-display {
   font-family: var(--font-display);
 }
+
+/* ✅ FIXED: Focus-visible styles for keyboard navigation accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-brand-electric);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Remove focus outline for mouse users */
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ✅ FIXED: Honor prefers-reduced-motion to disable animations */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .scroll-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

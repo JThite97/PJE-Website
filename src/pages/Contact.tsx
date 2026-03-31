@@ -22,8 +22,9 @@ export default function Contact() {
   return (
     <div className="w-full min-h-screen bg-slate-50">
       <SEO 
-        title="Contact Us | PJ Enterprise" 
-        description="Get in touch with the industrial experts at PJ Enterprise. Request quotes, technical support, or consultation."
+        title="Contact PJ Enterprise Vadodara | Shell Lubricant Enquiry" 
+        description="Contact PJ Enterprise in GIDC Makarpura, Vadodara for Shell oil quotes, technical support, and industrial product enquiries. Call +91-9979856997."
+        path="/contact"
       />
       {/* Page Header */}
       <section className="bg-slate-900 pt-32 pb-20 text-center relative overflow-hidden">

@@ -35,6 +35,7 @@ export default function Blog() {
       <SEO 
         title="Industrial Resources & Blog | PJ Enterprise" 
         description="Expert insights, technical guides, and industry news for optimizing your manufacturing and industrial operations."
+        path="/blog"
       />
       
       {/* Header */}
