@@ -221,7 +221,7 @@ export default function Services() {
           </p>
           <a 
             href="/contact" 
-            className="inline-flex items-center px-8 py-4 rounded-full bg-brand-600 text-white font-medium hover:bg-brand-500 transition-all shadow-lg shadow-brand-600/20"
+            className="inline-flex items-center px-8 py-4 rounded-[50px] bg-brand-600 text-white font-medium hover:bg-brand-electric hover:text-ink-900 transition-all shadow-md hover:shadow-[0_0_15px_var(--color-brand-electric)]"
           >
             Consult an Expert
             <ArrowRight className="ml-2" size={20} />

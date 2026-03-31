@@ -132,7 +132,7 @@ export default function Contact() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-slate-100"
+              className="bg-white p-8 md:p-14 rounded-3xl shadow-2xl border border-slate-100"
             >
               <h3 className="text-2xl font-bold text-slate-900 mb-6">Send us a Message</h3>
               
@@ -165,7 +165,7 @@ export default function Contact() {
                         name="first_name"
                         id="firstName" 
                         required
-                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white"
+                        className="w-full px-0 py-3 bg-transparent border-0 border-b border-slate-300 focus:ring-0 focus:border-brand-electric rounded-none outline-none transition-all text-slate-900 placeholder:text-slate-400"
                         placeholder="John"
                       />
                     </div>
@@ -176,7 +176,7 @@ export default function Contact() {
                         name="last_name"
                         id="lastName" 
                         required
-                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white"
+                        className="w-full px-0 py-3 bg-transparent border-0 border-b border-slate-300 focus:ring-0 focus:border-brand-electric rounded-none outline-none transition-all text-slate-900 placeholder:text-slate-400"
                         placeholder="Doe"
                       />
                     </div>
@@ -188,7 +188,7 @@ export default function Contact() {
                       type="text" 
                       name="company"
                       id="company" 
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white"
+                      className="w-full px-0 py-3 bg-transparent border-0 border-b border-slate-300 focus:ring-0 focus:border-brand-electric rounded-none outline-none transition-all text-slate-900 placeholder:text-slate-400"
                       placeholder="Your Company Ltd."
                     />
                   </div>
@@ -201,7 +201,7 @@ export default function Contact() {
                         name="email"
                         id="email" 
                         required
-                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white"
+                        className="w-full px-0 py-3 bg-transparent border-0 border-b border-slate-300 focus:ring-0 focus:border-brand-electric rounded-none outline-none transition-all text-slate-900 placeholder:text-slate-400"
                         placeholder="john@company.com"
                       />
                     </div>
@@ -211,7 +211,7 @@ export default function Contact() {
                         type="tel" 
                         name="phone"
                         id="phone" 
-                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white"
+                        className="w-full px-0 py-3 bg-transparent border-0 border-b border-slate-300 focus:ring-0 focus:border-brand-electric rounded-none outline-none transition-all text-slate-900 placeholder:text-slate-400"
                         placeholder="+91 XXXXX XXXXX"
                       />
                     </div>
@@ -223,7 +223,7 @@ export default function Contact() {
                       id="subject" 
                       name="subject"
                       required
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white appearance-none"
+                      className="w-full px-0 py-3 bg-transparent border-0 border-b border-slate-300 focus:ring-0 focus:border-brand-electric rounded-none outline-none transition-all text-slate-900 placeholder:text-slate-400"
                     >
                       <option value="">Select a subject...</option>
                       <option value="sales">Sales Inquiry</option>
@@ -240,14 +240,14 @@ export default function Contact() {
                       name="message"
                       required
                       rows={4}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white resize-none"
+                      className="w-full px-0 py-3 bg-transparent border-0 border-b border-slate-300 focus:ring-0 focus:border-brand-electric rounded-none outline-none transition-all text-slate-900 placeholder:text-slate-400 resize-none"
                       placeholder="How can we help you?"
                     ></textarea>
                   </div>
 
                   <button 
                     type="submit"
-                    className="w-full py-4 px-6 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg transition-colors flex items-center justify-center gap-2 shadow-lg shadow-blue-600/20"
+                    className="w-full py-4 px-6 rounded-[50px] bg-brand-600 hover:bg-brand-electric hover:text-ink-900 text-white font-bold text-lg transition-all flex items-center justify-center gap-2 shadow-md hover:shadow-[0_0_15px_var(--color-brand-electric)]"
                   >
                     <Send size={20} />
                     Send Message

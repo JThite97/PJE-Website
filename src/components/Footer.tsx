@@ -6,13 +6,13 @@ export default function Footer() {
   return (
     <footer className="bg-slate-950 text-slate-400 py-16 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Brand */}
           <div className="col-span-1 lg:col-span-1">
-            <Link to="/" className="text-2xl font-bold tracking-tighter text-white mb-6 block">
-              <span className="text-accent">PJ</span>
-              <span> </span>
-              <span className="text-accent">E</span>nterprise
+            <Link to="/" className="text-2xl font-bold tracking-tighter text-white mb-6 block" aria-label="PJ Enterprise">
+              <span aria-hidden="true">
+                <span className="text-accent">PJ</span> <span className="text-accent">E</span>nterprise
+              </span>
             </Link>
             <p className="text-sm leading-relaxed mb-6">
               Your trusted partner for premium industrial products, providing top-tier solutions to keep your operations running smoothly.
@@ -35,6 +35,18 @@ export default function Footer() {
               <li><Link to="/about" className="hover:text-blue-400 transition-colors flex items-center"><ArrowRight size={14} className="mr-2" /> About Us</Link></li>
               <li><Link to="/products" className="hover:text-blue-400 transition-colors flex items-center"><ArrowRight size={14} className="mr-2" /> Products</Link></li>
               <li><Link to="/services" className="hover:text-blue-400 transition-colors flex items-center"><ArrowRight size={14} className="mr-2" /> Services</Link></li>
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h3 className="text-white font-semibold mb-6 uppercase tracking-wider text-sm">
+              <Link to="/services" className="hover:text-white transition-colors">Services</Link>
+            </h3>
+            <ul className="space-y-4">
+              <li><Link to="/services#support" className="hover:text-blue-400 transition-colors flex items-center"><ArrowRight size={14} className="mr-2" /> Tech Support</Link></li>
+              <li><Link to="/services#consulting" className="hover:text-blue-400 transition-colors flex items-center"><ArrowRight size={14} className="mr-2" /> Consulting</Link></li>
+              <li><Link to="/services" className="hover:text-blue-400 transition-colors flex items-center"><ArrowRight size={14} className="mr-2" /> All Services</Link></li>
             </ul>
           </div>
 

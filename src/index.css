@@ -11,10 +11,29 @@
   --color-brand-600: #0052FF; /* Vibrant Electric Blue */
   --color-brand-700: #0043D1;
   --color-brand-900: #1e3a8a;
+  --color-brand-electric: #00E5FF; /* Added Cyber/Electric Cyan */
   
   --color-ink-900: #0A1128; /* Deep Industrial Navy */
   --color-paper: #F8FAFC;
   --color-accent: #F59E0B; /* Warm Amber */
+}
+
+@utility scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@utility is-revealed {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+@utility eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-brand-electric);
+  font-weight: 600;
 }
 
 html {
@@ -28,6 +47,12 @@ body {
   color: var(--color-ink-900);
 }
 
-h1, h2, h3, h4, h5, h6, .font-display {
+h1, h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.05em;
+}
+
+h3, h4, h5, h6, .font-display {
   font-family: var(--font-display);
 }
