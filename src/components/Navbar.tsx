@@ -21,6 +21,8 @@ export default function Navbar() {
     setIsMobileMenuOpen(false);
   }, [location.pathname]);
 
+  const isDarkNav = isScrolled || location.pathname === '/catalog';
+
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
@@ -39,8 +41,8 @@ export default function Navbar() {
     >
       <div 
         className={`max-w-7xl mx-auto transition-all duration-300 rounded-2xl ${
-          isScrolled 
-            ? 'bg-ink-900/70 backdrop-blur-xl shadow-sm border border-white/10 py-3 px-6' 
+          isDarkNav 
+            ? 'bg-ink-900/95 sm:bg-ink-900/80 backdrop-blur-xl shadow-sm border border-white/10 py-3 px-6' 
             : 'bg-transparent py-2 px-2 sm:px-4'
         }`}
       >
@@ -63,7 +65,7 @@ export default function Navbar() {
                 className={`relative text-base font-medium transition-colors hover:text-white ${
                   location.pathname === link.href 
                     ? 'text-white' 
-                    : isScrolled ? 'text-slate-300' : 'text-slate-200'
+                    : isDarkNav ? 'text-slate-300' : 'text-slate-200'
                 }`}
               >
                 {link.name}
@@ -75,7 +77,7 @@ export default function Navbar() {
             <Link
               to="/contact"
               className={`px-6 py-2.5 rounded-[50px] text-base font-medium transition-all shadow-md hover:shadow-[0_0_15px_rgba(0,229,255,0.4)] ${
-                isScrolled 
+                isDarkNav 
                   ? 'bg-brand-600 text-white shadow-brand-600/20 hover:bg-brand-electric hover:text-ink-900' 
                   : 'bg-white text-brand-600 hover:bg-brand-electric hover:text-ink-900'
               }`}

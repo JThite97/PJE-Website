@@ -1,0 +1,843 @@
+{
+  "Shell": {
+    "Argina  Marine Engine Oil Furnace": {
+      "Argina X 40": {
+        "_files": [
+          {
+            "name": "Shell Argina X 40 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Argina  Marine Engine Oil Furnace/Argina X 40/Shell_Argina_X_40_MSDS.pdf"
+          },
+          {
+            "name": "Shell Argina X 40 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Argina  Marine Engine Oil Furnace/Argina X 40/Shell_Argina_X_40_TDS.pdf"
+          }
+        ]
+      },
+      "Argina XL 40": {
+        "_files": [
+          {
+            "name": "Shell Argina XL 40 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Argina  Marine Engine Oil Furnace/Argina XL 40/Shell_Argina_XL_40_MSDS.pdf"
+          },
+          {
+            "name": "Shell Argina XL 40 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Argina  Marine Engine Oil Furnace/Argina XL 40/Shell_Argina_XL_40_TDS.pdf"
+          }
+        ]
+      }
+    },
+    "Bearing  Morlina": {
+      "Shell Morlina S1 B 100": {
+        "_files": [
+          {
+            "name": "Shell Shell Morlina S1 B 100 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Bearing  Morlina/Shell Morlina S1 B 100/Shell_Shell_Morlina_S1_B_100_MSDS.pdf"
+          },
+          {
+            "name": "Shell Shell Morlina S1 B 100 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Bearing  Morlina/Shell Morlina S1 B 100/Shell_Shell_Morlina_S1_B_100_TDS.pdf"
+          }
+        ]
+      },
+      "Shell Morlina S1 B 150": {
+        "_files": [
+          {
+            "name": "Shell Shell Morlina S1 B 150 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Bearing  Morlina/Shell Morlina S1 B 150/Shell_Shell_Morlina_S1_B_150_MSDS.pdf"
+          },
+          {
+            "name": "Shell Shell Morlina S1 B 150 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Bearing  Morlina/Shell Morlina S1 B 150/Shell_Shell_Morlina_S1_B_150_TDS.pdf"
+          }
+        ]
+      },
+      "Shell Morlina S1 B 220": {
+        "_files": [
+          {
+            "name": "Shell Shell Morlina S1 B 220 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Bearing  Morlina/Shell Morlina S1 B 220/Shell_Shell_Morlina_S1_B_220_MSDS.pdf"
+          },
+          {
+            "name": "Shell Shell Morlina S1 B 220 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Bearing  Morlina/Shell Morlina S1 B 220/Shell_Shell_Morlina_S1_B_220_TDS.pdf"
+          }
+        ]
+      },
+      "Shell Morlina S2 B 150": {
+        "_files": [
+          {
+            "name": "Shell Shell Morlina S2 B 150 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Bearing  Morlina/Shell Morlina S2 B 150/Shell_Shell_Morlina_S2_B_150_TDS.pdf"
+          }
+        ]
+      },
+      "Shell Morlina S2 B 220": {}
+    },
+    "Compressor  Corena": {
+      "Shell Corena S2 P 150": {},
+      "Shell Corena S3 R 68": {},
+      "Shell Corena S4 R 68": {}
+    },
+    "Gear Oil  Omala": {
+      "Shell Omala S2 G 100": {},
+      "Shell Omala S2 G 150": {},
+      "Shell Omala S2 G 220": {},
+      "Shell Omala S2 G 320": {},
+      "Shell Omala S2 G 460": {},
+      "Shell Omala S2 G 680": {},
+      "Shell Omala S4 GX 150": {},
+      "Shell Omala S4 GX 220": {},
+      "Shell Omala S4 GX 320": {},
+      "Shell Omala S4 GX 460": {},
+      "Shell Omala S4 WE 220": {},
+      "Shell omala S4 WE 320": {},
+      "Shell Omala S4 WE 460": {}
+    },
+    "Grease": {
+      "Shell Gadus S1 V100 25": {},
+      "Shell Gadus S1 V150D 2": {},
+      "Shell Gadus S1 V160 3": {},
+      "Shell Gadus S2 U 1000D2": {},
+      "Shell Gadus S2 V 100 3": {},
+      "Shell Gadus S2 V100 2": {},
+      "Shell Gadus S2 V220 0": {},
+      "Shell Gadus S2 V220AC": {},
+      "Shell Gadus S2 V460A 2": {},
+      "Shell Gadus S2-V220 00": {},
+      "Shell Gadus S2-V220 2": {},
+      "Shell GADUS S3 T220 2": {},
+      "Shell Gadus S3 V220C2": {}
+    },
+    "Heat Transfer": {
+      "Shell Heat Transfer Oil S2": {
+        "_files": [
+          {
+            "name": "Shell Shell Heat Transfer Oil S2 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Heat Transfer/Shell Heat Transfer Oil S2/Shell_Shell_Heat_Transfer_Oil_S2_MSDS.pdf"
+          },
+          {
+            "name": "Shell Shell Heat Transfer Oil S2 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Heat Transfer/Shell Heat Transfer Oil S2/Shell_Shell_Heat_Transfer_Oil_S2_TDS.pdf"
+          }
+        ]
+      }
+    },
+    "Hydraulic  Tellus": {
+      "Shell Tellus S2 M 100": {
+        "_files": [
+          {
+            "name": "Shell Shell Tellus S2 M 100 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S2 M 100/Shell_Shell_Tellus_S2_M_100_TDS.pdf"
+          }
+        ]
+      },
+      "Shell Tellus S2 M 22": {
+        "_files": [
+          {
+            "name": "Shell Shell Tellus S2 M 22 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S2 M 22/Shell_Shell_Tellus_S2_M_22_TDS.pdf"
+          }
+        ]
+      },
+      "Shell Tellus S2 M 32": {
+        "_files": [
+          {
+            "name": "Shell Shell Tellus S2 M 32 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S2 M 32/Shell_Shell_Tellus_S2_M_32_TDS.pdf"
+          }
+        ]
+      },
+      "Shell Tellus S2 M 46": {
+        "_files": [
+          {
+            "name": "Shell Shell Tellus S2 M 46 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S2 M 46/Shell_Shell_Tellus_S2_M_46_TDS.pdf"
+          }
+        ]
+      },
+      "Shell Tellus S2 M 68": {
+        "_files": [
+          {
+            "name": "Shell Shell Tellus S2 M 68 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S2 M 68/Shell_Shell_Tellus_S2_M_68_TDS.pdf"
+          }
+        ]
+      },
+      "Shell Tellus S2 MX 100": {
+        "_files": [
+          {
+            "name": "Shell Shell Tellus S2 MX 100 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S2 MX 100/Shell_Shell_Tellus_S2_MX_100_MSDS.pdf"
+          },
+          {
+            "name": "Shell Shell Tellus S2 MX 100 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S2 MX 100/Shell_Shell_Tellus_S2_MX_100_TDS.pdf"
+          }
+        ]
+      },
+      "Shell Tellus S2 MX 32": {
+        "_files": [
+          {
+            "name": "Shell Shell Tellus S2 MX 32 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S2 MX 32/Shell_Shell_Tellus_S2_MX_32_TDS.pdf"
+          }
+        ]
+      },
+      "Shell Tellus S2 MX 46": {
+        "_files": [
+          {
+            "name": "Shell Shell Tellus S2 MX 46 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S2 MX 46/Shell_Shell_Tellus_S2_MX_46_MSDS.pdf"
+          },
+          {
+            "name": "Shell Shell Tellus S2 MX 46 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S2 MX 46/Shell_Shell_Tellus_S2_MX_46_TDS.pdf"
+          }
+        ]
+      },
+      "Shell Tellus S2 MX 68": {
+        "_files": [
+          {
+            "name": "Shell Shell Tellus S2 MX 68 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S2 MX 68/Shell_Shell_Tellus_S2_MX_68_MSDS.pdf"
+          },
+          {
+            "name": "Shell Shell Tellus S2 MX 68 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S2 MX 68/Shell_Shell_Tellus_S2_MX_68_TDS.pdf"
+          }
+        ]
+      },
+      "Shell Tellus S2 V 100": {
+        "_files": [
+          {
+            "name": "Shell Shell Tellus S2 V 100 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S2 V 100/Shell_Shell_Tellus_S2_V_100_TDS.pdf"
+          }
+        ]
+      },
+      "Shell Tellus S2 V 46": {
+        "_files": [
+          {
+            "name": "Shell Shell Tellus S2 V 46 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S2 V 46/Shell_Shell_Tellus_S2_V_46_TDS.pdf"
+          }
+        ]
+      },
+      "Shell Tellus S2 V 68": {
+        "_files": [
+          {
+            "name": "Shell Shell Tellus S2 V 68 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S2 V 68/Shell_Shell_Tellus_S2_V_68_TDS.pdf"
+          }
+        ]
+      },
+      "Shell Tellus S2 VX 46": {
+        "_files": [
+          {
+            "name": "Shell Shell Tellus S2 VX 46 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S2 VX 46/Shell_Shell_Tellus_S2_VX_46_MSDS.pdf"
+          },
+          {
+            "name": "Shell Shell Tellus S2 VX 46 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S2 VX 46/Shell_Shell_Tellus_S2_VX_46_TDS.pdf"
+          }
+        ]
+      },
+      "Shell Tellus S3 M 68": {
+        "_files": [
+          {
+            "name": "Shell Shell Tellus S3 M 68 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S3 M 68/Shell_Shell_Tellus_S3_M_68_TDS.pdf"
+          }
+        ]
+      },
+      "Shell Tellus S3 V 46": {
+        "_files": [
+          {
+            "name": "Shell Shell Tellus S3 V 46 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S3 V 46/Shell_Shell_Tellus_S3_V_46_TDS.pdf"
+          }
+        ]
+      },
+      "Shell Tellus S3 V 68": {
+        "_files": [
+          {
+            "name": "Shell Shell Tellus S3 V 68 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S3 V 68/Shell_Shell_Tellus_S3_V_68_TDS.pdf"
+          }
+        ]
+      },
+      "Shell Tellus S4 ME 46": {
+        "_files": [
+          {
+            "name": "Shell Shell Tellus S4 ME 46 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S4 ME 46/Shell_Shell_Tellus_S4_ME_46_MSDS.pdf"
+          },
+          {
+            "name": "Shell Shell Tellus S4 ME 46 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S4 ME 46/Shell_Shell_Tellus_S4_ME_46_TDS.pdf"
+          }
+        ]
+      }
+    },
+    "Mysella  Ggas Engine Oil": {
+      "Mysella S3 N 40": {
+        "_files": [
+          {
+            "name": "Shell Mysella S3 N 40 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Mysella  Ggas Engine Oil/Mysella S3 N 40/Shell_Mysella_S3_N_40_TDS.pdf"
+          }
+        ]
+      },
+      "Mysella S3 S 40": {
+        "_files": [
+          {
+            "name": "Shell Mysella S3 S 40 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Mysella  Ggas Engine Oil/Mysella S3 S 40/Shell_Mysella_S3_S_40_TDS.pdf"
+          }
+        ]
+      },
+      "Mysella S5 N 40": {
+        "_files": [
+          {
+            "name": "Shell Mysella S5 N 40 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Mysella  Ggas Engine Oil/Mysella S5 N 40/Shell_Mysella_S5_N_40_TDS.pdf"
+          }
+        ]
+      }
+    },
+    "Refrigeration Oil": {
+      "Shell Refrigeration Oil FR V 68": {
+        "_files": [
+          {
+            "name": "Shell Shell Refrigeration Oil FR V 68 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Refrigeration Oil/Shell Refrigeration Oil FR V 68/Shell_Shell_Refrigeration_Oil_FR_V_68_MSDS.pdf"
+          },
+          {
+            "name": "Shell Shell Refrigeration Oil FR V 68 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Refrigeration Oil/Shell Refrigeration Oil FR V 68/Shell_Shell_Refrigeration_Oil_FR_V_68_TDS.pdf"
+          }
+        ]
+      }
+    },
+    "Rimula": {
+      "Shell Rimula R1 20W40": {
+        "_files": [
+          {
+            "name": "Shell Shell Rimula R1 20W40 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Rimula/Shell Rimula R1 20W40/Shell_Shell_Rimula_R1_20W40_MSDS.pdf"
+          },
+          {
+            "name": "Shell Shell Rimula R1 20W40 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Rimula/Shell Rimula R1 20W40/Shell_Shell_Rimula_R1_20W40_TDS.pdf"
+          }
+        ]
+      },
+      "Shell Rimula R2 15w40": {
+        "_files": [
+          {
+            "name": "Shell Shell Rimula R2 15w40 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Rimula/Shell Rimula R2 15w40/Shell_Shell_Rimula_R2_15w40_MSDS.pdf"
+          },
+          {
+            "name": "Shell Shell Rimula R2 15w40 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Rimula/Shell Rimula R2 15w40/Shell_Shell_Rimula_R2_15w40_TDS.pdf"
+          }
+        ]
+      },
+      "Shell Rimula R2 30": {
+        "_files": [
+          {
+            "name": "Shell Shell Rimula R2 30 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Rimula/Shell Rimula R2 30/Shell_Shell_Rimula_R2_30_MSDS.pdf"
+          },
+          {
+            "name": "Shell Shell Rimula R2 30 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Rimula/Shell Rimula R2 30/Shell_Shell_Rimula_R2_30_TDS.pdf"
+          }
+        ]
+      },
+      "Shell Rimula R3 10W": {
+        "_files": [
+          {
+            "name": "Shell Shell Rimula R3 10W MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Rimula/Shell Rimula R3 10W/Shell_Shell_Rimula_R3_10W_MSDS.pdf"
+          },
+          {
+            "name": "Shell Shell Rimula R3 10W TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Rimula/Shell Rimula R3 10W/Shell_Shell_Rimula_R3_10W_TDS.pdf"
+          }
+        ]
+      },
+      "Shell Rimula R3 X 15w40": {
+        "_files": [
+          {
+            "name": "Shell Shell Rimula R3 X 15w40 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Rimula/Shell Rimula R3 X 15w40/Shell_Shell_Rimula_R3_X_15w40_MSDS.pdf"
+          },
+          {
+            "name": "Shell Shell Rimula R3 X 15w40 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Rimula/Shell Rimula R3 X 15w40/Shell_Shell_Rimula_R3_X_15w40_TDS.pdf"
+          }
+        ]
+      },
+      "Shell Rimula R4 15 W40": {
+        "_files": [
+          {
+            "name": "Shell Shell Rimula R4 15 W40 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Rimula/Shell Rimula R4 15 W40/Shell_Shell_Rimula_R4_15_W40_MSDS.pdf"
+          },
+          {
+            "name": "Shell Shell Rimula R4 15 W40 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Rimula/Shell Rimula R4 15 W40/Shell_Shell_Rimula_R4_15_W40_TDS.pdf"
+          }
+        ]
+      },
+      "Shell Rimula R6 M 10W40": {
+        "_files": [
+          {
+            "name": "Shell Shell Rimula R6 M 10W40 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Rimula/Shell Rimula R6 M 10W40/Shell_Shell_Rimula_R6_M_10W40_MSDS.pdf"
+          },
+          {
+            "name": "Shell Shell Rimula R6 M 10W40 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Rimula/Shell Rimula R6 M 10W40/Shell_Shell_Rimula_R6_M_10W40_TDS.pdf"
+          }
+        ]
+      }
+    },
+    "Spirex": {
+      "Shell Spirax S2 A 85w140": {
+        "_files": [
+          {
+            "name": "Shell Shell Spirax S2 A 85w140 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Spirex/Shell Spirax S2 A 85w140/Shell_Shell_Spirax_S2_A_85w140_MSDS.pdf"
+          },
+          {
+            "name": "Shell Shell Spirax S2 A 85w140 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Spirex/Shell Spirax S2 A 85w140/Shell_Shell_Spirax_S2_A_85w140_TDS.pdf"
+          }
+        ]
+      },
+      "Shell Spirax S2 G 80w90": {
+        "_files": [
+          {
+            "name": "Shell Shell Spirax S2 G 80w90 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Spirex/Shell Spirax S2 G 80w90/Shell_Shell_Spirax_S2_G_80w90_MSDS.pdf"
+          },
+          {
+            "name": "Shell Shell Spirax S2 G 80w90 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Spirex/Shell Spirax S2 G 80w90/Shell_Shell_Spirax_S2_G_80w90_TDS.pdf"
+          }
+        ]
+      },
+      "Shell Spirax S6 AXME 75 W 90": {
+        "_files": [
+          {
+            "name": "Shell Shell Spirax S6 AXME 75 W 90 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Spirex/Shell Spirax S6 AXME 75 W 90/Shell_Shell_Spirax_S6_AXME_75_W_90_MSDS.pdf"
+          },
+          {
+            "name": "Shell Shell Spirax S6 AXME 75 W 90 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Spirex/Shell Spirax S6 AXME 75 W 90/Shell_Shell_Spirax_S6_AXME_75_W_90_TDS.pdf"
+          }
+        ]
+      },
+      "Spirax S1 ATF TASA en-IN": {
+        "_files": [
+          {
+            "name": "Shell Spirax S1 ATF TASA en-IN MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Spirex/Spirax S1 ATF TASA en-IN/Shell_Spirax_S1_ATF_TASA_en-IN_MSDS.pdf"
+          },
+          {
+            "name": "Shell Spirax S1 ATF TASA en-IN TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Spirex/Spirax S1 ATF TASA en-IN/Shell_Spirax_S1_ATF_TASA_en-IN_TDS.pdf"
+          }
+        ]
+      },
+      "Spirax S2 G 140": {
+        "_files": [
+          {
+            "name": "Shell Spirax S2 G 140 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Spirex/Spirax S2 G 140/Shell_Spirax_S2_G_140_MSDS.pdf"
+          },
+          {
+            "name": "Shell Spirax S2 G 140 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Spirex/Spirax S2 G 140/Shell_Spirax_S2_G_140_TDS.pdf"
+          }
+        ]
+      },
+      "Spirax S2 G 90": {
+        "_files": [
+          {
+            "name": "Shell Spirax S2 G 90 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Spirex/Spirax S2 G 90/Shell_Spirax_S2_G_90_MSDS.pdf"
+          },
+          {
+            "name": "Shell Spirax S2 G 90 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Spirex/Spirax S2 G 90/Shell_Spirax_S2_G_90_TDS.pdf"
+          }
+        ]
+      }
+    },
+    "Tonna  Slide Way Oil": {
+      "Shell Tonna S2 M 68": {
+        "_files": [
+          {
+            "name": "Shell Shell Tonna S2 M 68 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Tonna  Slide Way Oil/Shell Tonna S2 M 68/Shell_Shell_Tonna_S2_M_68_MSDS.pdf"
+          },
+          {
+            "name": "Shell Shell Tonna S2 M 68 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Tonna  Slide Way Oil/Shell Tonna S2 M 68/Shell_Shell_Tonna_S2_M_68_TDS.pdf"
+          }
+        ]
+      }
+    },
+    "Turbin": {
+      "Shell Turbo T 32": {
+        "_files": [
+          {
+            "name": "Shell Shell Turbo T 32 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Turbin/Shell Turbo T 32/Shell_Shell_Turbo_T_32_MSDS.pdf"
+          },
+          {
+            "name": "Shell Shell Turbo T 32 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Turbin/Shell Turbo T 32/Shell_Shell_Turbo_T_32_TDS.pdf"
+          }
+        ]
+      },
+      "Shell Turbo T 46": {
+        "_files": [
+          {
+            "name": "Shell Shell Turbo T 46 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Turbin/Shell Turbo T 46/Shell_Shell_Turbo_T_46_MSDS.pdf"
+          },
+          {
+            "name": "Shell Shell Turbo T 46 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Turbin/Shell Turbo T 46/Shell_Shell_Turbo_T_46_TDS.pdf"
+          }
+        ]
+      },
+      "Shell Turbo T 68": {
+        "_files": [
+          {
+            "name": "Shell Shell Turbo T 68 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Turbin/Shell Turbo T 68/Shell_Shell_Turbo_T_68_MSDS.pdf"
+          },
+          {
+            "name": "Shell Shell Turbo T 68 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Turbin/Shell Turbo T 68/Shell_Shell_Turbo_T_68_TDS.pdf"
+          }
+        ]
+      }
+    }
+  },
+  "Tyrolit": {
+    "Automotive Industry": {
+      "Chassis Components": {
+        "_files": [
+          {
+            "name": "Tyrolit Chassis Components Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Automotive Industry/Chassis Components/Tyrolit_Chassis_Components_Brochure.pdf"
+          }
+        ]
+      },
+      "Compressors And Turbocharger Components": {
+        "_files": [
+          {
+            "name": "Tyrolit Compressors And Turbocharger Components Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Automotive Industry/Compressors And Turbocharger Components/Tyrolit_Compressors_And_Turbocharger_Components_Brochure.pdf"
+          }
+        ]
+      },
+      "Con Rods": {
+        "_files": [
+          {
+            "name": "Tyrolit Con Rods Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Automotive Industry/Con Rods/Tyrolit_Con_Rods_Brochure.pdf"
+          }
+        ]
+      },
+      "Crankshafts And Camshafts": {
+        "_files": [
+          {
+            "name": "Tyrolit Crankshafts And Camshafts Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Automotive Industry/Crankshafts And Camshafts/Tyrolit_Crankshafts_And_Camshafts_Brochure.pdf"
+          }
+        ]
+      },
+      "Fuel Injection Components": {
+        "_files": [
+          {
+            "name": "Tyrolit Fuel Injection Components Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Automotive Industry/Fuel Injection Components/Tyrolit_Fuel_Injection_Components_Brochure.pdf"
+          }
+        ]
+      },
+      "Transmission Components": {
+        "_files": [
+          {
+            "name": "Tyrolit Transmission Components Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Automotive Industry/Transmission Components/Tyrolit_Transmission_Components_Brochure.pdf"
+          }
+        ]
+      },
+      "Valves": {
+        "_files": [
+          {
+            "name": "Tyrolit Valves Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Automotive Industry/Valves/Tyrolit_Valves_Brochure.pdf"
+          }
+        ]
+      }
+    },
+    "Bearing Industry": {
+      "Cylindrical Rollers And Needles": {
+        "_files": [
+          {
+            "name": "Tyrolit Cylindrical Rollers And Needles Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Bearing Industry/Cylindrical Rollers And Needles/Tyrolit_Cylindrical_Rollers_And_Needles_Brochure.pdf"
+          }
+        ]
+      },
+      "Guide Rails": {
+        "_files": [
+          {
+            "name": "Tyrolit Guide Rails Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Bearing Industry/Guide Rails/Tyrolit_Guide_Rails_Brochure.pdf"
+          }
+        ]
+      },
+      "Rolling Bearing Rings": {
+        "_files": [
+          {
+            "name": "Tyrolit Rolling Bearing Rings Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Bearing Industry/Rolling Bearing Rings/Tyrolit_Rolling_Bearing_Rings_Brochure.pdf"
+          }
+        ]
+      },
+      "Spherical Rollers 2": {
+        "_files": [
+          {
+            "name": "Tyrolit Spherical Rollers 2 Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Bearing Industry/Spherical Rollers 2/Tyrolit_Spherical_Rollers_2_Brochure.pdf"
+          }
+        ]
+      },
+      "Taper Rollers": {
+        "_files": [
+          {
+            "name": "Tyrolit Taper Rollers Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Bearing Industry/Taper Rollers/Tyrolit_Taper_Rollers_Brochure.pdf"
+          }
+        ]
+      }
+    },
+    "Foundry Industry": {
+      "Automatic Fettling": {
+        "_files": [
+          {
+            "name": "Tyrolit Automatic Fettling Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Foundry Industry/Automatic Fettling/Tyrolit_Automatic_Fettling_Brochure.pdf"
+          }
+        ]
+      },
+      "Off Hand Cutting": {
+        "_files": [
+          {
+            "name": "Tyrolit Off Hand Cutting Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Foundry Industry/Off Hand Cutting/Tyrolit_Off_Hand_Cutting_Brochure.pdf"
+          }
+        ]
+      },
+      "Off Hand Grinding": {
+        "_files": [
+          {
+            "name": "Tyrolit Off Hand Grinding Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Foundry Industry/Off Hand Grinding/Tyrolit_Off_Hand_Grinding_Brochure.pdf"
+          }
+        ]
+      },
+      "Pedestal And Pendular Grinding": {
+        "_files": [
+          {
+            "name": "Tyrolit Pedestal And Pendular Grinding Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Foundry Industry/Pedestal And Pendular Grinding/Tyrolit_Pedestal_And_Pendular_Grinding_Brochure.pdf"
+          }
+        ]
+      },
+      "Stationary Cut Off Grinding": {
+        "_files": [
+          {
+            "name": "Tyrolit Stationary Cut Off Grinding Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Foundry Industry/Stationary Cut Off Grinding/Tyrolit_Stationary_Cut_Off_Grinding_Brochure.pdf"
+          }
+        ]
+      }
+    },
+    "Medical Technology": {
+      "Grinding And Polishing Hip And Knee Joints": {
+        "_files": [
+          {
+            "name": "Tyrolit Grinding And Polishing Hip And Knee Joints Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Medical Technology/Grinding And Polishing Hip And Knee Joints/Tyrolit_Grinding_And_Polishing_Hip_And_Knee_Joints_Brochure.pdf"
+          }
+        ]
+      },
+      "Implants And Medical Instruments": {
+        "_files": [
+          {
+            "name": "Tyrolit Implants And Medical Instruments Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Medical Technology/Implants And Medical Instruments/Tyrolit_Implants_And_Medical_Instruments_Brochure.pdf"
+          }
+        ]
+      },
+      "Scissors And Scalpels": {
+        "_files": [
+          {
+            "name": "Tyrolit Scissors And Scalpels Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Medical Technology/Scissors And Scalpels/Tyrolit_Scissors_And_Scalpels_Brochure.pdf"
+          }
+        ]
+      },
+      "Scissors And Scalpels 2": {
+        "_files": [
+          {
+            "name": "Tyrolit Scissors And Scalpels 2 Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Medical Technology/Scissors And Scalpels 2/Tyrolit_Scissors_And_Scalpels_2_Brochure.pdf"
+          }
+        ]
+      }
+    },
+    "Steel and Foundry Industry": {
+      "Centreless Grinding": {
+        "_files": [
+          {
+            "name": "Tyrolit Centreless Grinding Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Steel and Foundry Industry/Centreless Grinding/Tyrolit_Centreless_Grinding_Brochure.pdf"
+          }
+        ]
+      },
+      "Cut Off Grind": {
+        "_files": [
+          {
+            "name": "Tyrolit Cut Off Grind Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Steel and Foundry Industry/Cut Off Grind/Tyrolit_Cut_Off_Grind_Brochure.pdf"
+          }
+        ]
+      },
+      "High Pressure Grinding": {
+        "_files": [
+          {
+            "name": "Tyrolit High Pressure Grinding Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Steel and Foundry Industry/High Pressure Grinding/Tyrolit_High_Pressure_Grinding_Brochure.pdf"
+          }
+        ]
+      },
+      "Roll Grinding": {
+        "_files": [
+          {
+            "name": "Tyrolit Roll Grinding Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Steel and Foundry Industry/Roll Grinding/Tyrolit_Roll_Grinding_Brochure.pdf"
+          }
+        ]
+      }
+    },
+    "Tooling Industry": {
+      "Bandsaws And Circular Saws": {
+        "_files": [
+          {
+            "name": "Tyrolit Bandsaws And Circular Saws Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Tooling Industry/Bandsaws And Circular Saws/Tyrolit_Bandsaws_And_Circular_Saws_Brochure.pdf"
+          }
+        ]
+      },
+      "Cutting Inserts": {
+        "_files": [
+          {
+            "name": "Tyrolit Cutting Inserts Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Tooling Industry/Cutting Inserts/Tyrolit_Cutting_Inserts_Brochure.pdf"
+          }
+        ]
+      },
+      "Rotating Tools": {
+        "_files": [
+          {
+            "name": "Tyrolit Rotating Tools Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Tooling Industry/Rotating Tools/Tyrolit_Rotating_Tools_Brochure.pdf"
+          }
+        ]
+      }
+    },
+    "Turbine Industry": {
+      "Strato Ultra": {
+        "_files": [
+          {
+            "name": "Tyrolit Strato Ultra Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Turbine Industry/Strato Ultra/Tyrolit_Strato_Ultra_Brochure.pdf"
+          }
+        ]
+      },
+      "Polaris LW": {
+        "_files": [
+          {
+            "name": "Tyrolit Polaris LW Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Turbine Industry/Polaris LW/Tyrolit_Polaris_LW_Brochure.pdf"
+          }
+        ]
+      },
+      "Secur XT": {
+        "_files": [
+          {
+            "name": "Tyrolit Secur XT Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Turbine Industry/Secur XT/Tyrolit_Secur_XT_Brochure.pdf"
+          }
+        ]
+      },
+      "Viper Ultra": {},
+      "Strato Alpha": {},
+      "Strato SA 2": {}
+    },
+    "Technical Ceramics": {
+      "Diamond VIB Star": {
+        "_files": [
+          {
+            "name": "Tyrolit Diamond VIB Star Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Technical Ceramics/Diamond VIB Star/Tyrolit_Diamond_VIB_Star_Brochure.pdf"
+          }
+        ]
+      },
+      "Solotec": {
+        "_files": [
+          {
+            "name": "Tyrolit Solotec Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Technical Ceramics/Solotec/Tyrolit_Solotec_Brochure.pdf"
+          }
+        ]
+      },
+      "Double Disc Grinding Wheels": {},
+      "1A1R Diamond Wheel": {}
+    },
+    "Precision Industry": {
+      "Centuria": {
+        "_files": [
+          {
+            "name": "Tyrolit Centuria Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Precision Industry/Centuria/Tyrolit_Centuria_Brochure.pdf"
+          }
+        ]
+      },
+      "Columbia 2": {
+        "_files": [
+          {
+            "name": "Tyrolit Columbia 2 Brochure",
+            "path": "PJ_Enterprise_Catalog/Tyrolit/Precision Industry/Columbia 2/Tyrolit_Columbia_2_Brochure.pdf"
+          }
+        ]
+      },
+      "Elastic Wheel For Watchmaking": {},
+      "CSS Regulator": {}
+    }
+  }
+}

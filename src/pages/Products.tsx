@@ -7,13 +7,13 @@ const productBrands = [
     name: 'Shell',
     description: 'Premium industrial lubricants, hydraulic fluids, and gear oils engineered for ultimate equipment protection.',
     logo: '/shell-4.svg',
-    catalogUrl: '#',
+    catalogUrl: '/catalog?brand=Shell',
   },
   {
     name: 'Tyrolit',
     description: 'World-leading precision tools for grinding, cut-off, sawing, and drilling applications.',
     logo: '/Tyrolit-Logo.svg-1024x421.png',
-    catalogUrl: '#',
+    catalogUrl: '/catalog?brand=Tyrolit',
   },
   {
     name: 'Quaker Houghton',
@@ -112,7 +112,7 @@ export default function Products() {
                     className="inline-flex items-center justify-center sm:justify-start text-brand-600 font-bold hover:text-brand-700 transition-colors"
                   >
                     <Download size={18} className="mr-2" />
-                    Download Product Catalog PDF
+                    View Full Catalog
                   </a>
                 </div>
               </motion.div>

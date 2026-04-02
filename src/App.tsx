@@ -20,6 +20,7 @@ const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
 const FAQ = lazy(() => import('./pages/FAQ'));
 const Blog = lazy(() => import('./pages/Blog'));
+const Catalog = lazy(() => import('./pages/Catalog'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 export default function App() {
@@ -33,6 +34,7 @@ export default function App() {
             <Route path="about" element={<About />} />
             <Route path="products" element={<Products />} />
             <Route path="services" element={<Services />} />
+            <Route path="catalog" element={<Catalog />} />
             <Route path="contact" element={<Contact />} />
             <Route path="privacy" element={<Privacy />} />
             <Route path="terms" element={<Terms />} />
