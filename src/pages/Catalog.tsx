@@ -29,6 +29,9 @@ const SHELL_FAMILIES = [
       { name: "Argina X 40",  tds: "#", msds: "#" },
       { name: "Argina XL 40", tds: "#", msds: "#" },
     ],
+    brochures: [
+      { label: "Shell Argina Brochure", path: "/assets/shell/brochures/ARGINA/Shell Argina Brochure.pdf", type: "brochure" as const },
+    ],
   },
   {
     family: "Corena – Compressor Oil",
@@ -40,6 +43,16 @@ const SHELL_FAMILIES = [
       { name: "Shell Corena S2 P 150", tds: "#", msds: "#" },
       { name: "Shell Corena S3 R 68",  tds: "#", msds: "#" },
       { name: "Shell Corena S4 R 68",  tds: "#", msds: "#" },
+    ],
+    brochures: [
+      { label: "Portfolio Brochure",    path: "/assets/shell/brochures/CORENA/Shell Corena Portfolio brochure.pdf", type: "brochure" as const },
+      { label: "Corena S2 P Leaflet",   path: "/assets/shell/brochures/CORENA/Shell Corena S2 P Leaflet.pdf", type: "leaflet" as const },
+      { label: "Corena S4 R Leaflet",   path: "/assets/shell/brochures/CORENA/Shell Corena S4 R Leaflet.pdf", type: "leaflet" as const },
+      { label: "S2P Brochure",          path: "/assets/shell/brochures/Corena Air Compressor Oil/Brochures/S2P.pdf", type: "brochure" as const },
+      { label: "S2R Brochure",          path: "/assets/shell/brochures/Corena Air Compressor Oil/Brochures/S2R.pdf", type: "brochure" as const },
+      { label: "S3R Brochure",          path: "/assets/shell/brochures/Corena Air Compressor Oil/Brochures/S3R.pdf", type: "brochure" as const },
+      { label: "S4P Brochure",          path: "/assets/shell/brochures/Corena Air Compressor Oil/Brochures/S4P.pdf", type: "brochure" as const },
+      { label: "S4R Brochure",          path: "/assets/shell/brochures/Corena Air Compressor Oil/Brochures/S4R.pdf", type: "brochure" as const },
     ],
   },
   {
@@ -60,6 +73,18 @@ const SHELL_FAMILIES = [
       { name: "Shell Gadus S3 V460D 2",   tds: "#", msds: "#" },
       { name: "Shell Gadus S5 V100 2",    tds: "#", msds: "#" },
     ],
+    brochures: [
+      { label: "Industrial Greases Brochure", path: "/assets/shell/brochures/GADUS/Industrial Greases Brochure.pdf", type: "brochure" as const },
+      { label: "Portfolio Brochure",           path: "/assets/shell/brochures/GADUS/Shell Gadus Portfolio brochure.pdf", type: "brochure" as const },
+      { label: "Gadus S2 V100 Leaflet",        path: "/assets/shell/brochures/GADUS/Shell Gadus S2 V100 leaflet.pdf", type: "leaflet" as const },
+      { label: "Gadus S2 V220 AC Leaflet",     path: "/assets/shell/brochures/GADUS/Shell Gadus S2 V220 AC leaflet.pdf", type: "leaflet" as const },
+      { label: "Gadus S2 V220 AD",             path: "/assets/shell/brochures/GADUS/Shell Gadus S2 V220 AD.pdf", type: "leaflet" as const },
+      { label: "Gadus S2 V220 Leaflet",        path: "/assets/shell/brochures/GADUS/Shell Gadus S2 V220 leaflet.pdf", type: "leaflet" as const },
+      { label: "Gadus S3 V100 Leaflet",        path: "/assets/shell/brochures/GADUS/Shell Gadus S3 V100 leaflet.pdf", type: "leaflet" as const },
+      { label: "Gadus S3 V220 C Leaflet",      path: "/assets/shell/brochures/GADUS/Shell Gadus S3 V220 C leaflet.pdf", type: "leaflet" as const },
+      { label: "Gadus S3 V460 D Leaflet",      path: "/assets/shell/brochures/GADUS/Shell Gadus S3 V460 D leaflet.pdf", type: "leaflet" as const },
+      { label: "Gadus S3 V460 Leaflet",        path: "/assets/shell/brochures/GADUS/Shell Gadus S3 V460 leaflet.pdf", type: "leaflet" as const },
+    ],
   },
   {
     family: "Mysella – Gas Engine Oil",
@@ -70,6 +95,11 @@ const SHELL_FAMILIES = [
       { name: "Mysella S3 N 40", tds: "#", msds: null },
       { name: "Mysella S3 S 40", tds: "#", msds: null },
       { name: "Mysella S5 N 40", tds: "#", msds: null },
+    ],
+    brochures: [
+      { label: "Mysella MA Leaflet",           path: "/assets/shell/brochures/MYSELLA/Shell Mysella MA leaflet.pdf", type: "leaflet" as const },
+      { label: "Mysella Transition Chart",      path: "/assets/shell/brochures/MYSELLA/Shell_ Mysella_transistion_chart_low.pdf", type: "brochure" as const },
+      { label: "Mysella Family Brochure",       path: "/assets/shell/brochures/MYSELLA/Shell_Mysella_family_brochure_low.pdf", type: "brochure" as const },
     ],
   },
   {
@@ -85,6 +115,10 @@ const SHELL_FAMILIES = [
       { name: "Shell Rimula R3 X 15W40",  tds: "#", msds: "#" },
       { name: "Shell Rimula R4 15W40",    tds: "#", msds: "#" },
       { name: "Shell Rimula R6 M 10W40",  tds: "#", msds: "#" },
+    ],
+    brochures: [
+      { label: "Rimula R5 LE One Pager",        path: "/assets/shell/brochures/RIMULA/Rimula R5 LE One Pager_B2B.pdf", type: "leaflet" as const },
+      { label: "Rimula Product Portfolio",       path: "/assets/shell/brochures/RIMULA/Shell Rimula Brochure_VerB-Rimula Product Portfolio.pdf", type: "brochure" as const },
     ],
   },
   {
@@ -104,6 +138,10 @@ const SHELL_FAMILIES = [
       { name: "Shell Tellus S3 V 46",  tds: "#", msds: null },
       { name: "Shell Tellus S4 ME 46", tds: "#", msds: "#" },
     ],
+    brochures: [
+      { label: "Tellus Portfolio Brochure",     path: "/assets/shell/brochures/TELLUS/Shell_Tellus_Potfolio_Brochure.pdf", type: "brochure" as const },
+      { label: "Tellus Product Leaflets",       path: "/assets/shell/brochures/TELLUS/Shell_Tellus_Product_Leaflets.pdf", type: "leaflet" as const },
+    ],
   },
   {
     family: "Omala – Gear Oil",
@@ -121,6 +159,13 @@ const SHELL_FAMILIES = [
       { name: "Shell Omala S4 WE 220", tds: "#", msds: "#" },
       { name: "Shell Omala S4 WE 320", tds: "#", msds: "#" },
     ],
+    brochures: [
+      { label: "Omala Brochure",           path: "/assets/shell/brochures/OMALA/Shell Omala Brochure.pdf", type: "brochure" as const },
+      { label: "Omala Portfolio Brochure",  path: "/assets/shell/brochures/OMALA/Shell Omala Portfolio Brochure.pdf", type: "brochure" as const },
+      { label: "Omala S2 G Leaflets",      path: "/assets/shell/brochures/OMALA/Shell Omala S2 G Leaflets.pdf", type: "leaflet" as const },
+      { label: "Omala S4 GX Leaflet",      path: "/assets/shell/brochures/OMALA/Shell Omala S4 GX leaflet.pdf", type: "leaflet" as const },
+      { label: "Omala S4 WE Leaflets",     path: "/assets/shell/brochures/OMALA/Shell Omala S4 WE Leaflets.pdf", type: "leaflet" as const },
+    ],
   },
   {
     family: "Morlina – Bearing Oil",
@@ -134,6 +179,11 @@ const SHELL_FAMILIES = [
       { name: "Shell Morlina S1 B 320", tds: "#", msds: "#" },
       { name: "Shell Morlina S2 B 220", tds: "#", msds: "#" },
     ],
+    brochures: [
+      { label: "Morlina Portfolio Brochure", path: "/assets/shell/brochures/MORLINA/Shell Morlina Portfolio brochure.pdf", type: "brochure" as const },
+      { label: "Morlina S2 B Leaflet",      path: "/assets/shell/brochures/MORLINA/Shell Morlina S2 B leaflet.pdf", type: "leaflet" as const },
+      { label: "Morlina S2 BA Leaflet",     path: "/assets/shell/brochures/MORLINA/Shell Morlina S2 BA leaflet.pdf", type: "leaflet" as const },
+    ],
   },
   {
     family: "Turbin – Turbine Oil",
@@ -144,6 +194,10 @@ const SHELL_FAMILIES = [
       { name: "Shell Turbo T 32", tds: "#", msds: "#" },
       { name: "Shell Turbo T 46", tds: "#", msds: "#" },
       { name: "Shell Turbo T 68", tds: "#", msds: "#" },
+    ],
+    brochures: [
+      { label: "Turbo Family Brochure", path: "/assets/shell/brochures/TURBO/Shell Turbo Product Family Brochure.pdf", type: "brochure" as const },
+      { label: "Turbo T Leaflet",       path: "/assets/shell/brochures/TURBO/Shell Turbo T leaflet.pdf", type: "leaflet" as const },
     ],
   },
   {
@@ -157,6 +211,14 @@ const SHELL_FAMILIES = [
       { name: "Shell Spirax S6 AXME 75W90", tds: "#", msds: "#" },
       { name: "Spirax S1 ATF TASA",         tds: "#", msds: "#" },
     ],
+    brochures: [
+      { label: "Spirax Portfolio Brochure",  path: "/assets/shell/brochures/SPIREX/Shell Spirax Portfolio brochure.pdf", type: "brochure" as const },
+      { label: "Spirax S2 A Leaflet",        path: "/assets/shell/brochures/SPIREX/Shell Spirax S2 A leaflet.pdf", type: "leaflet" as const },
+      { label: "Spirax S2 G Leaflet",        path: "/assets/shell/brochures/SPIREX/Shell Spirax S2 G leaflet.pdf", type: "leaflet" as const },
+      { label: "Spirax S5 ATF X Leaflet",    path: "/assets/shell/brochures/SPIREX/Shell Spirax S5 ATF X leaflet.pdf", type: "leaflet" as const },
+      { label: "Spirax S6 ATF VM Leaflet",   path: "/assets/shell/brochures/SPIREX/Shell Spirax S6 ATF VM leaflet.pdf", type: "leaflet" as const },
+      { label: "Spirax S6 AXME Leaflet",     path: "/assets/shell/brochures/SPIREX/Shell Spirax S6 AXME leaflet.pdf", type: "leaflet" as const },
+    ],
   },
   {
     family: "Tonna – Slide Way Oil",
@@ -165,6 +227,9 @@ const SHELL_FAMILIES = [
     image: "/assets/shell/_industries/argina.png",
     products: [
       { name: "Shell Tonna S2 M 68", tds: "#", msds: "#" },
+    ],
+    brochures: [
+      { label: "Tonna S2 Leaflet", path: "/assets/shell/brochures/TONNA/Shell Tonna S2 leaflet.pdf", type: "leaflet" as const },
     ],
   },
   {
@@ -175,6 +240,10 @@ const SHELL_FAMILIES = [
     products: [
       { name: "Shell Heat Transfer Oil S2", tds: "#", msds: "#" },
     ],
+    brochures: [
+      { label: "Heat Transfer Oil Brochure",  path: "/assets/shell/brochures/HTO/Shell Heat transfer oil.pdf", type: "brochure" as const },
+      { label: "Thermax Approval",             path: "/assets/shell/brochures/HTO/Thermax aproval.pdf", type: "brochure" as const },
+    ],
   },
   {
     family: "Refrigeration Oil",
@@ -184,6 +253,7 @@ const SHELL_FAMILIES = [
     products: [
       { name: "Shell Refrigeration Oil FR V 68", tds: "#", msds: "#" },
     ],
+    brochures: [],
   },
 ];
 
@@ -443,6 +513,68 @@ function ShellCard({ product, onEnquire }: { product: { name: string; family: st
         className="mt-auto w-full py-1.5 rounded-lg border border-slate-200 text-xs font-semibold text-slate-600 hover:border-brand-400 hover:text-brand-700 hover:bg-brand-50 transition-all cursor-pointer">
         Enquire about this product
       </button>
+    </div>
+  );
+}
+
+// ─── SHELL BROCHURE BAR ───────────────────────────────────────────────────────
+function ShellBrochureBar({ brochures }: { brochures: { label: string; path: string; type: "brochure" | "leaflet" }[] }) {
+  if (!brochures || brochures.length === 0) return null;
+
+  const brochureItems = brochures.filter(b => b.type === "brochure");
+  const leafletItems  = brochures.filter(b => b.type === "leaflet");
+
+  return (
+    <div className="mb-6 bg-gradient-to-br from-brand-50 via-white to-amber-50 border border-brand-200 rounded-2xl p-5 shadow-sm">
+      <div className="flex items-center gap-2.5 mb-4">
+        <div className="w-8 h-8 rounded-lg bg-brand-500 text-white flex items-center justify-center text-sm">
+          <svg className="w-4 h-4" viewBox="0 0 16 16" fill="currentColor"><path d="M4 0a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V5.5L9.5 0H4zm5 1.5L13.5 6H10a1 1 0 01-1-1V1.5z"/></svg>
+        </div>
+        <div>
+          <h3 className="font-bold text-slate-900 text-sm">Family Documents</h3>
+          <p className="text-[11px] text-slate-500">Brochures, leaflets & product portfolios</p>
+        </div>
+      </div>
+
+      {brochureItems.length > 0 && (
+        <div className="mb-3">
+          <p className="text-[10px] font-bold tracking-widest uppercase text-slate-400 mb-2">Brochures & Portfolios</p>
+          <div className="flex flex-wrap gap-2">
+            {brochureItems.map((b, i) => (
+              <a
+                key={i}
+                href={b.path}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-[12px] font-semibold px-3 py-1.5 rounded-lg bg-brand-100 text-brand-800 border border-brand-200 hover:bg-brand-200 hover:border-brand-300 hover:shadow-sm transition-all group"
+              >
+                <svg className="w-3.5 h-3.5 opacity-70 group-hover:opacity-100 transition-opacity" viewBox="0 0 16 16" fill="currentColor"><path d="M4 0a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V5.5L9.5 0H4zm5 1.5L13.5 6H10a1 1 0 01-1-1V1.5z"/></svg>
+                {b.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {leafletItems.length > 0 && (
+        <div>
+          <p className="text-[10px] font-bold tracking-widest uppercase text-slate-400 mb-2">Product Leaflets</p>
+          <div className="flex flex-wrap gap-2">
+            {leafletItems.map((b, i) => (
+              <a
+                key={i}
+                href={b.path}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-[12px] font-semibold px-3 py-1.5 rounded-lg bg-amber-50 text-amber-800 border border-amber-200 hover:bg-amber-100 hover:border-amber-300 hover:shadow-sm transition-all group"
+              >
+                <svg className="w-3.5 h-3.5 opacity-70 group-hover:opacity-100 transition-opacity" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a.5.5 0 01.5.5V11h3.793l-4.147 4.146a.5.5 0 01-.707 0L3.293 11.5H7V1.5A.5.5 0 018 1z"/></svg>
+                {b.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -809,15 +941,23 @@ export default function Catalog() {
           {brand === "shell" ? (
             activeShellFamily ? (
               /* ── Shell inner product grid ── */
-              filteredShellProducts.length > 0 ? (
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                  {filteredShellProducts.map((p, i) => (
-                    <ShellCard key={i} product={p} onEnquire={setEnquiryProduct} />
-                  ))}
-                </div>
-              ) : (
-                <EmptyState query={query} onClear={() => setQuery('')} />
-              )
+              <>
+                {/* Brochure bar for the active family */}
+                {(() => {
+                  const fam = SHELL_FAMILIES.find(f => f.family === activeShellFamily);
+                  return fam?.brochures ? <ShellBrochureBar brochures={fam.brochures} /> : null;
+                })()}
+
+                {filteredShellProducts.length > 0 ? (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                    {filteredShellProducts.map((p, i) => (
+                      <ShellCard key={i} product={p} onEnquire={setEnquiryProduct} />
+                    ))}
+                  </div>
+                ) : (
+                  <EmptyState query={query} onClear={() => setQuery('')} />
+                )}
+              </>
             ) : (
               /* ── Shell family overview grid ── */
               filteredShellFamilies.length > 0 ? (
