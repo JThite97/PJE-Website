@@ -22,6 +22,11 @@ const partners = [
     logo: '/EWAC_logo-e1572510444878.webp',
     description: 'Welding Solutions',
   },
+  {
+    name: 'Groz',
+    logo: '/groz-logo.svg',
+    description: 'Engineering Tools & Equipment',
+  },
 ];
 
 export default function Partners() {
@@ -59,7 +64,7 @@ export default function Partners() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8">
           {partners.map((partner, index) => (
             <motion.div
               key={partner.name}

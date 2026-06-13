@@ -6,17 +6,37 @@ import SEO from '../components/SEO';
 export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission to third-party endpoint
     const form = e.target as HTMLFormElement;
     
-    // In production, this would be an actual fetch to Formspree or EmailJS
-    // fetch('https://formspree.io/f/placeholder', { method: 'POST', body: new FormData(form) })
-    
-    setIsSubmitted(true);
-    form.reset();
-    setTimeout(() => setIsSubmitted(false), 5000);
+    const accessKey = import.meta.env.VITE_WEB3FORMS_KEY;
+    if (accessKey) {
+      const formData = new FormData(form);
+      formData.append("access_key", accessKey);
+      
+      try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData
+        });
+        const data = await response.json();
+        if (data.success) {
+          setIsSubmitted(true);
+          form.reset();
+          setTimeout(() => setIsSubmitted(false), 5000);
+        } else {
+          alert("Submission failed: " + (data.message || "Unknown error."));
+        }
+      } catch (error) {
+        alert("A network error occurred. Please try again later or email us directly at office@pjenterprise.in.");
+      }
+    } else {
+      // Simulate form submission for development/offline mode
+      setIsSubmitted(true);
+      form.reset();
+      setTimeout(() => setIsSubmitted(false), 5000);
+    }
   };
 
   return (
@@ -95,7 +115,9 @@ export default function Contact() {
                   <div className="ml-6">
                     <h3 className="text-xl font-bold text-slate-900 mb-1">Phone</h3>
                     <p className="text-slate-600">
-                      +91-9979856997
+                      <a href="tel:+919979856997" className="hover:text-brand-600 transition-colors">
+                        +91-9979856997
+                      </a>
                     </p>
                   </div>
                 </div>
@@ -107,7 +129,9 @@ export default function Contact() {
                   <div className="ml-6">
                     <h3 className="text-xl font-bold text-slate-900 mb-1">Email</h3>
                     <p className="text-slate-600">
-                      office@pjenterprise.in
+                      <a href="mailto:office@pjenterprise.in" className="hover:text-brand-600 transition-colors">
+                        office@pjenterprise.in
+                      </a>
                     </p>
                   </div>
                 </div>
@@ -253,6 +277,9 @@ export default function Contact() {
                     <Send size={20} />
                     Send Message
                   </button>
+                  <p className="text-xs text-slate-400 mt-4 text-center leading-relaxed">
+                    * Inquiries are routed to <span className="text-slate-500 font-semibold">office@pjenterprise.in</span>. To activate live email forwarding, add your <code className="text-slate-600 font-mono bg-slate-100 px-1 py-0.5 rounded">VITE_WEB3FORMS_KEY</code> key in your environment.
+                  </p>
                 </form>
               )}
             </motion.div>

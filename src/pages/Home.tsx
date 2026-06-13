@@ -55,16 +55,16 @@ export default function Home() {
 
           <ScrollReveal delay={100}>
             <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight mb-6 font-display">
-              Powering Industry <br className="hidden md:block" />
+              Premium Industrial <br className="hidden md:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-brand-electric drop-shadow-sm">
-                With Value Selling
+                Lubricants &amp; Precision Tools
               </span>
             </h1>
           </ScrollReveal>
 
           <ScrollReveal delay={200}>
             <p className="max-w-2xl mx-auto text-lg md:text-xl text-slate-300 mb-10 leading-relaxed font-light">
-              Your trusted partner for premium industrial products. We provide top-tier solutions including Shell lubricants and Tyrolit precision tools to keep your operations running smoothly.
+              Authorized Shell lubricants distributor in Vadodara. Supplying Shell oils, Tyrolit grinding tools, Quaker Houghton metalworking fluids &amp; EWAC welding solutions to 1500+ industries across Gujarat &amp; MP.
             </p>
           </ScrollReveal>
 

@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block assets that aren't useful to crawlers
+Disallow: /assets/tyrolit/
+Disallow: /assets/shell/brochures/
+
+# Sitemap location
+Sitemap: https://pjenterprise.in/sitemap.xml

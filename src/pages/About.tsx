@@ -122,7 +122,7 @@ export default function About() {
             >
               <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=1000" 
+                  src="/jigish-shah.jpg" 
                   alt="Mr. Jigish Shah - Founder" 
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -202,24 +202,26 @@ export default function About() {
         </div>
       </section>
 
-      {/* Meet the Team Placeholder */}
+      {/* Company Credentials */}
       <section className="py-24 bg-white border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">Meet the Experts</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">Our Team &amp; Credentials</h2>
             <p className="text-lg text-slate-600 leading-relaxed">
-              Our strength lies in our dedicated team of 10 qualified engineers and 5 diligent back-office professionals.
+              Behind every delivery is a team of qualified engineers and industry experts dedicated to your success.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="text-center group">
-                <div className="w-48 h-48 mx-auto rounded-full bg-slate-100 mb-6 overflow-hidden border-4 border-white shadow-lg group-hover:border-blue-50 transition-colors">
-                  <img src={`https://i.pravatar.cc/150?img=${i + 10}`} alt={`Team Member ${i}`} className="w-full h-full object-cover" loading="lazy" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900">Expert Name</h3>
-                <p className="text-brand-600 font-medium mb-2">Technical Engineer</p>
-                <p className="text-sm text-slate-500 px-4">Specializing in fluid dynamics and lubrication optimization.</p>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {[
+              { value: '19+', label: 'Years in Business', color: 'bg-blue-50 text-blue-600 border-blue-100' },
+              { value: '1500+', label: 'Satisfied Customers', color: 'bg-emerald-50 text-emerald-600 border-emerald-100' },
+              { value: '10', label: 'Qualified Engineers', color: 'bg-purple-50 text-purple-600 border-purple-100' },
+              { value: '4', label: 'Global Brand Partners', color: 'bg-amber-50 text-amber-600 border-amber-100' },
+              { value: '2', label: 'States Served', color: 'bg-rose-50 text-rose-600 border-rose-100' },
+            ].map((stat) => (
+              <div key={stat.label} className={`rounded-2xl border p-6 text-center ${stat.color} flex flex-col items-center justify-center gap-2`}>
+                <div className="text-4xl font-bold font-display">{stat.value}</div>
+                <div className="text-sm font-semibold leading-snug">{stat.label}</div>
               </div>
             ))}
           </div>

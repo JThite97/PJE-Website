@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import { 
   Activity, 
   Recycle, 
@@ -135,10 +136,9 @@ export default function Services() {
               >
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-yellow-50 border border-yellow-200 text-yellow-700 text-sm font-bold mb-6">
                   <img 
-                    src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e8/Shell_logo.svg/120px-Shell_logo.svg.png" 
+                    src="/shell-4.svg" 
                     alt="Shell" 
                     className="h-4 mr-2"
-                    referrerPolicy="no-referrer"
                     loading="lazy"
                   />
                   Shell Services Portfolio
@@ -220,13 +220,13 @@ export default function Services() {
           <p className="text-xl text-slate-300 mb-10 font-light max-w-2xl mx-auto">
             Contact our technical experts today to discuss which Shell services can bring the most value to your specific industry applications.
           </p>
-          <a 
-            href="/contact" 
+          <Link 
+            to="/contact" 
             className="inline-flex items-center px-8 py-4 rounded-[50px] bg-brand-600 text-white font-medium hover:bg-brand-electric hover:text-ink-900 transition-all shadow-md hover:shadow-[0_0_15px_var(--color-brand-electric)]"
           >
             Consult an Expert
             <ArrowRight className="ml-2" size={20} />
-          </a>
+          </Link>
         </div>
       </section>
     </div>
