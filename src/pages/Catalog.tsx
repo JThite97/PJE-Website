@@ -257,6 +257,32 @@ const SHELL_FAMILIES = [
   },
 ];
 
+// ─── SHELL TDS / MSDS LOOKUP ──────────────────────────────────────────────────
+// The product list above only carries names. The real TDS/MSDS PDFs live under
+// public/PJ_Enterprise_Catalog/Shell and are indexed in catalog.json, whose folder
+// names differ slightly (case, spacing, "Shell" prefix, "en-IN" suffix). Match on a
+// normalised key so every product picks up whatever documents actually exist.
+const normaliseShellName = (s: string) =>
+  s.toLowerCase().replace(/\ben-in\b/g, "").replace(/shell/g, "").replace(/[^a-z0-9]/g, "");
+
+const SHELL_DOCS: Record<string, { tds: string | null; msds: string | null }> = (() => {
+  const out: Record<string, { tds: string | null; msds: string | null }> = {};
+  const shell = (catalogData as Record<string, Record<string, CatalogIndustry>>).Shell || {};
+  for (const family of Object.values(shell)) {
+    for (const [productName, productData] of Object.entries(family)) {
+      const files = (productData as CatalogProduct)?._files || [];
+      const find = (kind: string) => {
+        const f = files.find(x => new RegExp(`_${kind}\\.pdf$`, "i").test(x.path));
+        return f ? encodeURI("/" + f.path) : null;
+      };
+      out[normaliseShellName(productName)] = { tds: find("TDS"), msds: find("MSDS") };
+    }
+  }
+  return out;
+})();
+
+const shellDocsFor = (name: string) => SHELL_DOCS[normaliseShellName(name)] || { tds: null, msds: null };
+
 // Tyrolit industry definitions — mapped to catalog.json keys and local images
 const TYROLIT_INDUSTRIES = [
   {
@@ -504,6 +530,12 @@ function ShellCard({ product, onEnquire }: { product: { name: string; family: st
             <svg className="w-3 h-3" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 3a1 1 0 110 2 1 1 0 010-2zm-.75 3h1.5v4h-1.5V7z"/></svg>
             MSDS
           </a>
+        )}
+        {!product.tds && (
+          <button type="button" onClick={() => onEnquire(product)}
+            className="inline-flex items-center gap-1 text-[11px] font-semibold px-2.5 py-1 rounded-md bg-slate-50 text-slate-500 border border-slate-200 hover:bg-slate-100 transition-colors cursor-pointer">
+            TDS on request
+          </button>
         )}
       </div>
 
@@ -771,7 +803,7 @@ export default function Catalog() {
 
   // Flat list of all Shell products for filtering
   const allShellProducts = useMemo(() =>
-    SHELL_FAMILIES.flatMap(f => f.products.map(p => ({ ...p, family: f.family }))),
+    SHELL_FAMILIES.flatMap(f => f.products.map(p => ({ ...p, ...shellDocsFor(p.name), family: f.family }))),
   []);
 
   const filteredShellProducts = useMemo(() => {
