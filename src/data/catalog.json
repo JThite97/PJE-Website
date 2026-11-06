@@ -71,42 +71,332 @@
           }
         ]
       },
-      "Shell Morlina S2 B 220": {}
+      "Shell Morlina S2 B 220": {
+        "_files": [
+          {
+            "name": "Shell Shell Morlina S2 B 220 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Bearing  Morlina/Shell Morlina S2 B 220/Shell_Shell_Morlina_S2_B_220_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell Morlina S2 B 220 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Bearing  Morlina/Shell Morlina S2 B 220/Shell_Shell_Morlina_S2_B_220_MSDS.pdf"
+          }
+        ]
+      },
+      "Shell Morlina S1 B 320": {
+        "_files": [
+          {
+            "name": "Shell Shell Morlina S1 B 320 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Bearing  Morlina/Shell Morlina S1 B 320/Shell_Shell_Morlina_S1_B_320_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell Morlina S1 B 320 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Bearing  Morlina/Shell Morlina S1 B 320/Shell_Shell_Morlina_S1_B_320_MSDS.pdf"
+          }
+        ]
+      }
     },
     "Compressor  Corena": {
-      "Shell Corena S2 P 150": {},
-      "Shell Corena S3 R 68": {},
-      "Shell Corena S4 R 68": {}
+      "Shell Corena S2 P 150": {
+        "_files": [
+          {
+            "name": "Shell Shell Corena S2 P 150 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Compressor  Corena/Shell Corena S2 P 150/Shell_Shell_Corena_S2_P_150_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell Corena S2 P 150 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Compressor  Corena/Shell Corena S2 P 150/Shell_Shell_Corena_S2_P_150_MSDS.pdf"
+          }
+        ]
+      },
+      "Shell Corena S3 R 68": {
+        "_files": [
+          {
+            "name": "Shell Shell Corena S3 R 68 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Compressor  Corena/Shell Corena S3 R 68/Shell_Shell_Corena_S3_R_68_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell Corena S3 R 68 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Compressor  Corena/Shell Corena S3 R 68/Shell_Shell_Corena_S3_R_68_MSDS.pdf"
+          }
+        ]
+      },
+      "Shell Corena S4 R 68": {
+        "_files": [
+          {
+            "name": "Shell Shell Corena S4 R 68 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Compressor  Corena/Shell Corena S4 R 68/Shell_Shell_Corena_S4_R_68_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell Corena S4 R 68 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Compressor  Corena/Shell Corena S4 R 68/Shell_Shell_Corena_S4_R_68_MSDS.pdf"
+          }
+        ]
+      },
+      "Shell Corena S2 P 100": {
+        "_files": [
+          {
+            "name": "Shell Shell Corena S2 P 100 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Compressor  Corena/Shell Corena S2 P 100/Shell_Shell_Corena_S2_P_100_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell Corena S2 P 100 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Compressor  Corena/Shell Corena S2 P 100/Shell_Shell_Corena_S2_P_100_MSDS.pdf"
+          }
+        ]
+      }
     },
     "Gear Oil  Omala": {
-      "Shell Omala S2 G 100": {},
-      "Shell Omala S2 G 150": {},
-      "Shell Omala S2 G 220": {},
-      "Shell Omala S2 G 320": {},
-      "Shell Omala S2 G 460": {},
+      "Shell Omala S2 G 100": {
+        "_files": [
+          {
+            "name": "Shell Shell Omala S2 G 100 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Gear Oil  Omala/Shell Omala S2 G 100/Shell_Shell_Omala_S2_G_100_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell Omala S2 G 100 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Gear Oil  Omala/Shell Omala S2 G 100/Shell_Shell_Omala_S2_G_100_MSDS.pdf"
+          }
+        ]
+      },
+      "Shell Omala S2 G 150": {
+        "_files": [
+          {
+            "name": "Shell Shell Omala S2 G 150 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Gear Oil  Omala/Shell Omala S2 G 150/Shell_Shell_Omala_S2_G_150_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell Omala S2 G 150 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Gear Oil  Omala/Shell Omala S2 G 150/Shell_Shell_Omala_S2_G_150_MSDS.pdf"
+          }
+        ]
+      },
+      "Shell Omala S2 G 220": {
+        "_files": [
+          {
+            "name": "Shell Shell Omala S2 G 220 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Gear Oil  Omala/Shell Omala S2 G 220/Shell_Shell_Omala_S2_G_220_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell Omala S2 G 220 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Gear Oil  Omala/Shell Omala S2 G 220/Shell_Shell_Omala_S2_G_220_MSDS.pdf"
+          }
+        ]
+      },
+      "Shell Omala S2 G 320": {
+        "_files": [
+          {
+            "name": "Shell Shell Omala S2 G 320 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Gear Oil  Omala/Shell Omala S2 G 320/Shell_Shell_Omala_S2_G_320_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell Omala S2 G 320 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Gear Oil  Omala/Shell Omala S2 G 320/Shell_Shell_Omala_S2_G_320_MSDS.pdf"
+          }
+        ]
+      },
+      "Shell Omala S2 G 460": {
+        "_files": [
+          {
+            "name": "Shell Shell Omala S2 G 460 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Gear Oil  Omala/Shell Omala S2 G 460/Shell_Shell_Omala_S2_G_460_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell Omala S2 G 460 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Gear Oil  Omala/Shell Omala S2 G 460/Shell_Shell_Omala_S2_G_460_MSDS.pdf"
+          }
+        ]
+      },
       "Shell Omala S2 G 680": {},
       "Shell Omala S4 GX 150": {},
-      "Shell Omala S4 GX 220": {},
-      "Shell Omala S4 GX 320": {},
+      "Shell Omala S4 GX 220": {
+        "_files": [
+          {
+            "name": "Shell Shell Omala S4 GX 220 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Gear Oil  Omala/Shell Omala S4 GX 220/Shell_Shell_Omala_S4_GX_220_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell Omala S4 GX 220 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Gear Oil  Omala/Shell Omala S4 GX 220/Shell_Shell_Omala_S4_GX_220_MSDS.pdf"
+          }
+        ]
+      },
+      "Shell Omala S4 GX 320": {
+        "_files": [
+          {
+            "name": "Shell Shell Omala S4 GX 320 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Gear Oil  Omala/Shell Omala S4 GX 320/Shell_Shell_Omala_S4_GX_320_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell Omala S4 GX 320 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Gear Oil  Omala/Shell Omala S4 GX 320/Shell_Shell_Omala_S4_GX_320_MSDS.pdf"
+          }
+        ]
+      },
       "Shell Omala S4 GX 460": {},
-      "Shell Omala S4 WE 220": {},
-      "Shell omala S4 WE 320": {},
+      "Shell Omala S4 WE 220": {
+        "_files": [
+          {
+            "name": "Shell Shell Omala S4 WE 220 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Gear Oil  Omala/Shell Omala S4 WE 220/Shell_Shell_Omala_S4_WE_220_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell Omala S4 WE 220 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Gear Oil  Omala/Shell Omala S4 WE 220/Shell_Shell_Omala_S4_WE_220_MSDS.pdf"
+          }
+        ]
+      },
+      "Shell omala S4 WE 320": {
+        "_files": [
+          {
+            "name": "Shell Shell omala S4 WE 320 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Gear Oil  Omala/Shell omala S4 WE 320/Shell_Shell_omala_S4_WE_320_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell omala S4 WE 320 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Gear Oil  Omala/Shell omala S4 WE 320/Shell_Shell_omala_S4_WE_320_MSDS.pdf"
+          }
+        ]
+      },
       "Shell Omala S4 WE 460": {}
     },
     "Grease": {
-      "Shell Gadus S1 V100 25": {},
-      "Shell Gadus S1 V150D 2": {},
-      "Shell Gadus S1 V160 3": {},
-      "Shell Gadus S2 U 1000D2": {},
+      "Shell Gadus S1 V100 25": {
+        "_files": [
+          {
+            "name": "Shell Shell Gadus S1 V100 25 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Grease/Shell Gadus S1 V100 25/Shell_Shell_Gadus_S1_V100_25_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell Gadus S1 V100 25 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Grease/Shell Gadus S1 V100 25/Shell_Shell_Gadus_S1_V100_25_MSDS.pdf"
+          }
+        ]
+      },
+      "Shell Gadus S1 V150D 2": {
+        "_files": [
+          {
+            "name": "Shell Shell Gadus S1 V150D 2 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Grease/Shell Gadus S1 V150D 2/Shell_Shell_Gadus_S1_V150D_2_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell Gadus S1 V150D 2 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Grease/Shell Gadus S1 V150D 2/Shell_Shell_Gadus_S1_V150D_2_MSDS.pdf"
+          }
+        ]
+      },
+      "Shell Gadus S1 V160 3": {
+        "_files": [
+          {
+            "name": "Shell Shell Gadus S1 V160 3 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Grease/Shell Gadus S1 V160 3/Shell_Shell_Gadus_S1_V160_3_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell Gadus S1 V160 3 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Grease/Shell Gadus S1 V160 3/Shell_Shell_Gadus_S1_V160_3_MSDS.pdf"
+          }
+        ]
+      },
+      "Shell Gadus S2 U 1000D2": {
+        "_files": [
+          {
+            "name": "Shell Shell Gadus S2 U 1000D2 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Grease/Shell Gadus S2 U 1000D2/Shell_Shell_Gadus_S2_U_1000D2_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell Gadus S2 U 1000D2 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Grease/Shell Gadus S2 U 1000D2/Shell_Shell_Gadus_S2_U_1000D2_MSDS.pdf"
+          }
+        ]
+      },
       "Shell Gadus S2 V 100 3": {},
-      "Shell Gadus S2 V100 2": {},
-      "Shell Gadus S2 V220 0": {},
-      "Shell Gadus S2 V220AC": {},
+      "Shell Gadus S2 V100 2": {
+        "_files": [
+          {
+            "name": "Shell Shell Gadus S2 V100 2 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Grease/Shell Gadus S2 V100 2/Shell_Shell_Gadus_S2_V100_2_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell Gadus S2 V100 2 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Grease/Shell Gadus S2 V100 2/Shell_Shell_Gadus_S2_V100_2_MSDS.pdf"
+          }
+        ]
+      },
+      "Shell Gadus S2 V220 0": {
+        "_files": [
+          {
+            "name": "Shell Shell Gadus S2 V220 0 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Grease/Shell Gadus S2 V220 0/Shell_Shell_Gadus_S2_V220_0_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell Gadus S2 V220 0 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Grease/Shell Gadus S2 V220 0/Shell_Shell_Gadus_S2_V220_0_MSDS.pdf"
+          }
+        ]
+      },
+      "Shell Gadus S2 V220AC": {
+        "_files": [
+          {
+            "name": "Shell Shell Gadus S2 V220AC MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Grease/Shell Gadus S2 V220AC/Shell_Shell_Gadus_S2_V220AC_MSDS.pdf"
+          },
+          {
+            "name": "Shell Shell Gadus S2 V220AC TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Grease/Shell Gadus S2 V220AC/Shell_Shell_Gadus_S2_V220AC_TDS.pdf"
+          }
+        ]
+      },
       "Shell Gadus S2 V460A 2": {},
       "Shell Gadus S2-V220 00": {},
       "Shell Gadus S2-V220 2": {},
-      "Shell GADUS S3 T220 2": {},
-      "Shell Gadus S3 V220C2": {}
+      "Shell GADUS S3 T220 2": {
+        "_files": [
+          {
+            "name": "Shell Shell GADUS S3 T220 2 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Grease/Shell GADUS S3 T220 2/Shell_Shell_GADUS_S3_T220_2_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell GADUS S3 T220 2 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Grease/Shell GADUS S3 T220 2/Shell_Shell_GADUS_S3_T220_2_MSDS.pdf"
+          }
+        ]
+      },
+      "Shell Gadus S3 V220C2": {
+        "_files": [
+          {
+            "name": "Shell Shell Gadus S3 V220C2 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Grease/Shell Gadus S3 V220C2/Shell_Shell_Gadus_S3_V220C2_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell Gadus S3 V220C2 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Grease/Shell Gadus S3 V220C2/Shell_Shell_Gadus_S3_V220C2_MSDS.pdf"
+          }
+        ]
+      },
+      "Shell Gadus S3 V460D 2": {
+        "_files": [
+          {
+            "name": "Shell Shell Gadus S3 V460D 2 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Grease/Shell Gadus S3 V460D 2/Shell_Shell_Gadus_S3_V460D_2_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell Gadus S3 V460D 2 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Grease/Shell Gadus S3 V460D 2/Shell_Shell_Gadus_S3_V460D_2_MSDS.pdf"
+          }
+        ]
+      },
+      "Shell Gadus S5 V100 2": {
+        "_files": [
+          {
+            "name": "Shell Shell Gadus S5 V100 2 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Grease/Shell Gadus S5 V100 2/Shell_Shell_Gadus_S5_V100_2_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell Gadus S5 V100 2 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Grease/Shell Gadus S5 V100 2/Shell_Shell_Gadus_S5_V100_2_MSDS.pdf"
+          }
+        ]
+      }
     },
     "Heat Transfer": {
       "Shell Heat Transfer Oil S2": {
@@ -128,6 +418,10 @@
           {
             "name": "Shell Shell Tellus S2 M 100 TDS",
             "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S2 M 100/Shell_Shell_Tellus_S2_M_100_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell Tellus S2 M 100 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S2 M 100/Shell_Shell_Tellus_S2_M_100_MSDS.pdf"
           }
         ]
       },
@@ -144,6 +438,10 @@
           {
             "name": "Shell Shell Tellus S2 M 32 TDS",
             "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S2 M 32/Shell_Shell_Tellus_S2_M_32_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell Tellus S2 M 32 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S2 M 32/Shell_Shell_Tellus_S2_M_32_MSDS.pdf"
           }
         ]
       },
@@ -152,6 +450,10 @@
           {
             "name": "Shell Shell Tellus S2 M 46 TDS",
             "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S2 M 46/Shell_Shell_Tellus_S2_M_46_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell Tellus S2 M 46 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S2 M 46/Shell_Shell_Tellus_S2_M_46_MSDS.pdf"
           }
         ]
       },
@@ -160,6 +462,10 @@
           {
             "name": "Shell Shell Tellus S2 M 68 TDS",
             "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S2 M 68/Shell_Shell_Tellus_S2_M_68_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell Tellus S2 M 68 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S2 M 68/Shell_Shell_Tellus_S2_M_68_MSDS.pdf"
           }
         ]
       },
@@ -180,6 +486,10 @@
           {
             "name": "Shell Shell Tellus S2 MX 32 TDS",
             "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S2 MX 32/Shell_Shell_Tellus_S2_MX_32_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell Tellus S2 MX 32 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S2 MX 32/Shell_Shell_Tellus_S2_MX_32_MSDS.pdf"
           }
         ]
       },
@@ -256,6 +566,10 @@
           {
             "name": "Shell Shell Tellus S3 V 46 TDS",
             "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S3 V 46/Shell_Shell_Tellus_S3_V_46_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell Tellus S3 V 46 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S3 V 46/Shell_Shell_Tellus_S3_V_46_MSDS.pdf"
           }
         ]
       },
@@ -278,6 +592,18 @@
             "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S4 ME 46/Shell_Shell_Tellus_S4_ME_46_TDS.pdf"
           }
         ]
+      },
+      "Shell Tellus S3 M 46": {
+        "_files": [
+          {
+            "name": "Shell Shell Tellus S3 M 46 TDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S3 M 46/Shell_Shell_Tellus_S3_M_46_TDS.pdf"
+          },
+          {
+            "name": "Shell Shell Tellus S3 M 46 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Hydraulic  Tellus/Shell Tellus S3 M 46/Shell_Shell_Tellus_S3_M_46_MSDS.pdf"
+          }
+        ]
       }
     },
     "Mysella  Ggas Engine Oil": {
@@ -286,6 +612,10 @@
           {
             "name": "Shell Mysella S3 N 40 TDS",
             "path": "PJ_Enterprise_Catalog/Shell/Mysella  Ggas Engine Oil/Mysella S3 N 40/Shell_Mysella_S3_N_40_TDS.pdf"
+          },
+          {
+            "name": "Shell Mysella S3 N 40 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Mysella  Ggas Engine Oil/Mysella S3 N 40/Shell_Mysella_S3_N_40_MSDS.pdf"
           }
         ]
       },
@@ -294,6 +624,10 @@
           {
             "name": "Shell Mysella S3 S 40 TDS",
             "path": "PJ_Enterprise_Catalog/Shell/Mysella  Ggas Engine Oil/Mysella S3 S 40/Shell_Mysella_S3_S_40_TDS.pdf"
+          },
+          {
+            "name": "Shell Mysella S3 S 40 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Mysella  Ggas Engine Oil/Mysella S3 S 40/Shell_Mysella_S3_S_40_MSDS.pdf"
           }
         ]
       },
@@ -302,6 +636,10 @@
           {
             "name": "Shell Mysella S5 N 40 TDS",
             "path": "PJ_Enterprise_Catalog/Shell/Mysella  Ggas Engine Oil/Mysella S5 N 40/Shell_Mysella_S5_N_40_TDS.pdf"
+          },
+          {
+            "name": "Shell Mysella S5 N 40 MSDS",
+            "path": "PJ_Enterprise_Catalog/Shell/Mysella  Ggas Engine Oil/Mysella S5 N 40/Shell_Mysella_S5_N_40_MSDS.pdf"
           }
         ]
       }

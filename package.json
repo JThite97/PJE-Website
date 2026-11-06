@@ -10,7 +10,8 @@
     "clean": "rm -rf dist",
     "lint": "eslint src --ext .ts,.tsx",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "crawl:shell": "node scripts/shell-epc-crawler.mjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.14",
