@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import { ArrowRight, Calendar, User, BookOpen } from 'lucide-react';
 
@@ -49,7 +50,8 @@ export default function Blog() {
             alt=""
             aria-hidden="true"
             className="w-full h-full object-cover opacity-20"
-            loading="lazy"
+            loading="eager"
+            fetchPriority="high"
           />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -80,7 +82,7 @@ export default function Blog() {
             <BookOpen size={20} className="text-amber-600 flex-shrink-0 mt-0.5" />
             <p className="text-sm text-amber-800 leading-relaxed">
               <span className="font-bold">Full articles coming soon.</span> Our team is finalising these guides. Use the previews below to get a sense of upcoming content — or{' '}
-              <a href="/contact" className="underline font-semibold hover:text-amber-900">contact us directly</a> for technical advice.
+              <Link to="/contact" className="underline font-semibold hover:text-amber-900">contact us directly</Link> for technical advice.
             </p>
           </div>
 

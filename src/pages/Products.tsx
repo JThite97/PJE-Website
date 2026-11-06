@@ -64,7 +64,8 @@ export default function Products() {
             src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=2070"
             alt="Products Background"
             className="w-full h-full object-cover opacity-20"
-            loading="lazy"
+            loading="eager"
+            fetchPriority="high"
           />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
