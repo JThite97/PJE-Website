@@ -96,7 +96,8 @@ export default function Services() {
             src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=2070"
             alt="Services Background"
             className="w-full h-full object-cover opacity-20"
-            loading="lazy"
+            loading="eager"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-ink-900/80 to-ink-900"></div>
         </div>
@@ -121,7 +122,7 @@ export default function Services() {
       </section>
 
       {/* Shell Services - Split Layout with Sticky Image */}
-      <section className="py-24 bg-white">
+      <section id="support" className="py-24 bg-white scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-16 items-start">
             
@@ -211,7 +212,7 @@ export default function Services() {
       </section>
       
       {/* CTA Section */}
-      <section className="py-20 bg-ink-900 text-white relative overflow-hidden">
+      <section id="consulting" className="scroll-mt-24 py-20 bg-ink-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=2070')] bg-cover bg-center mix-blend-luminosity"></div>
         </div>

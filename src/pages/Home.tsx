@@ -42,7 +42,8 @@ export default function Home() {
             src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2070"
             alt="Industrial Background"
             className="w-full h-full object-cover opacity-30"
-            loading="lazy"
+            loading="eager"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-ink-900/90 via-ink-900/60 to-ink-900"></div>
         </div>

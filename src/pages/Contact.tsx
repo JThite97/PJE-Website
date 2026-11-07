@@ -1,41 +1,56 @@
 import React, { useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle2 } from 'lucide-react';
 import SEO from '../components/SEO';
+import { sendEnquiry, OFFICE_EMAIL } from '../lib/enquiry';
+
+const SUBJECTS: Record<string, string> = {
+  sales: 'Sales Inquiry',
+  support: 'Technical Support',
+  partnership: 'Partnership Opportunities',
+  other: 'Other',
+};
 
 export default function Contact() {
+  const [searchParams] = useSearchParams();
+  const subjectParam = searchParams.get('subject') ?? '';
+  const productParam = searchParams.get('product') ?? '';
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [notice, setNotice] = useState<string | null>(null);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = e.target as HTMLFormElement;
-    
-    const accessKey = import.meta.env.VITE_WEB3FORMS_KEY;
-    if (accessKey) {
-      const formData = new FormData(form);
-      formData.append("access_key", accessKey);
-      
-      try {
-        const response = await fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          body: formData
-        });
-        const data = await response.json();
-        if (data.success) {
-          setIsSubmitted(true);
-          form.reset();
-          setTimeout(() => setIsSubmitted(false), 5000);
-        } else {
-          alert("Submission failed: " + (data.message || "Unknown error."));
-        }
-      } catch (error) {
-        alert("A network error occurred. Please try again later or email us directly at office@pjenterprise.in.");
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const get = (k: string) => String(data.get(k) ?? '').trim();
+    const subjectLabel = SUBJECTS[get('subject')] ?? 'Website enquiry';
+
+    setError(null);
+    setNotice(null);
+    setIsSending(true);
+    try {
+      const result = await sendEnquiry(`${subjectLabel} from ${get('first_name')} ${get('last_name')}`, {
+        Name: `${get('first_name')} ${get('last_name')}`,
+        Company: get('company'),
+        Email: get('email'),
+        Phone: get('phone'),
+        Subject: subjectLabel,
+        Message: get('message'),
+      });
+      if (result === 'sent') {
+        setIsSubmitted(true);
+        form.reset();
+        setTimeout(() => setIsSubmitted(false), 5000);
+      } else {
+        setNotice(`Your email app should open with the message ready to send. If it doesn't, email us at ${OFFICE_EMAIL}.`);
       }
-    } else {
-      // Simulate form submission for development/offline mode
-      setIsSubmitted(true);
-      form.reset();
-      setTimeout(() => setIsSubmitted(false), 5000);
+    } catch {
+      setError(`We couldn't send your message. Please try again, or email us at ${OFFICE_EMAIL}.`);
+    } finally {
+      setIsSending(false);
     }
   };
 
@@ -53,7 +68,8 @@ export default function Contact() {
             src="https://images.unsplash.com/photo-1587560699334-cc4ff634909a?auto=format&fit=crop&q=80&w=2070"
             alt="Contact Us Background"
             className="w-full h-full object-cover opacity-20"
-            loading="lazy"
+            loading="eager"
+            fetchPriority="high"
           />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -177,10 +193,9 @@ export default function Contact() {
                 </motion.div>
               ) : (
                 <form 
+                  key={searchParams.toString()}
                   onSubmit={handleSubmit} 
                   className="space-y-6"
-                  action="https://formspree.io/f/placeholder"
-                  method="POST"
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
@@ -248,6 +263,7 @@ export default function Contact() {
                       id="subject" 
                       name="subject"
                       required
+                      defaultValue={SUBJECTS[subjectParam] ? subjectParam : ''}
                       className="w-full px-0 py-3 bg-transparent border-0 border-b border-slate-300 focus:ring-0 focus:border-brand-electric rounded-none outline-none transition-all text-slate-900 placeholder:text-slate-400"
                     >
                       <option value="">Select a subject...</option>
@@ -264,6 +280,7 @@ export default function Contact() {
                       id="message" 
                       name="message"
                       required
+                      defaultValue={productParam ? `I'd like to know more about your ${productParam} products.` : ''}
                       rows={4}
                       className="w-full px-0 py-3 bg-transparent border-0 border-b border-slate-300 focus:ring-0 focus:border-brand-electric rounded-none outline-none transition-all text-slate-900 placeholder:text-slate-400 resize-none"
                       placeholder="How can we help you?"
@@ -272,14 +289,18 @@ export default function Contact() {
 
                   <button 
                     type="submit"
-                    className="w-full py-4 px-6 rounded-[50px] bg-brand-600 hover:bg-brand-electric hover:text-ink-900 text-white font-bold text-lg transition-all flex items-center justify-center gap-2 shadow-md hover:shadow-[0_0_15px_var(--color-brand-electric)]"
+                    disabled={isSending}
+                    className="w-full py-4 px-6 rounded-[50px] bg-brand-600 hover:bg-brand-electric hover:text-ink-900 text-white font-bold text-lg transition-all disabled:opacity-60 disabled:cursor-wait flex items-center justify-center gap-2 shadow-md hover:shadow-[0_0_15px_var(--color-brand-electric)]"
                   >
                     <Send size={20} />
-                    Send Message
+                    {isSending ? 'Sending…' : 'Send Message'}
                   </button>
-                  <p className="text-xs text-slate-400 mt-4 text-center leading-relaxed">
-                    * Inquiries are routed to <span className="text-slate-500 font-semibold">office@pjenterprise.in</span>. To activate live email forwarding, add your <code className="text-slate-600 font-mono bg-slate-100 px-1 py-0.5 rounded">VITE_WEB3FORMS_KEY</code> key in your environment.
-                  </p>
+                  {error && (
+                    <p role="alert" className="text-sm text-rose-600 text-center">{error}</p>
+                  )}
+                  {notice && (
+                    <p role="status" className="text-sm text-slate-500 text-center">{notice}</p>
+                  )}
                 </form>
               )}
             </motion.div>

@@ -1,7 +1,10 @@
-import { useState, useMemo, useRef, useEffect } from "react";
+import { useState, useMemo, useRef, useEffect, useCallback } from "react";
 import { useSearchParams } from "react-router-dom";
 import SEO from "../components/SEO";
 import catalogData from "../data/catalog.json";
+import { sendEnquiry, OFFICE_EMAIL } from "../lib/enquiry";
+
+type EnquiryProduct = { name: string; family: string };
 
 // ─── TYPES ──────────────────────────────────────────────────────────────────────
 interface CatalogFile {
@@ -24,7 +27,7 @@ const SHELL_FAMILIES = [
     family: "Argina – Marine Engine Oil",
     icon: "🚢",
     desc: "Premium trunk piston engine oil designed for medium-speed marine diesel engines.",
-    image: "/assets/shell/_industries/argina.png",
+    image: "/assets/shell/_industries/argina.webp",
     products: [
       { name: "Argina X 40",  tds: "#", msds: "#" },
       { name: "Argina XL 40", tds: "#", msds: "#" },
@@ -37,7 +40,7 @@ const SHELL_FAMILIES = [
     family: "Corena – Compressor Oil",
     icon: "💨",
     desc: "High-performance air compressor oils to ensure long equipment life.",
-    image: "/assets/shell/_industries/corena.png",
+    image: "/assets/shell/_industries/corena.webp",
     products: [
       { name: "Shell Corena S2 P 100", tds: "#", msds: "#" },
       { name: "Shell Corena S2 P 150", tds: "#", msds: "#" },
@@ -59,7 +62,7 @@ const SHELL_FAMILIES = [
     family: "Gadus – Grease",
     icon: "⚙️",
     desc: "Lithium and specialty greases for enhanced wear protection in bearings and joints.",
-    image: "/assets/shell/_industries/gadus.png",
+    image: "/assets/shell/_industries/gadus.webp",
     products: [
       { name: "Shell Gadus S1 V100 2.5",  tds: "#", msds: "#" },
       { name: "Shell Gadus S1 V150D 2",   tds: "#", msds: "#" },
@@ -90,7 +93,7 @@ const SHELL_FAMILIES = [
     family: "Mysella – Gas Engine Oil",
     icon: "🔥",
     desc: "Premium quality oil for stationary gas engines running on natural gas.",
-    image: "/assets/shell/_industries/mysella.png",
+    image: "/assets/shell/_industries/mysella.webp",
     products: [
       { name: "Mysella S3 N 40", tds: "#", msds: null },
       { name: "Mysella S3 S 40", tds: "#", msds: null },
@@ -106,7 +109,7 @@ const SHELL_FAMILIES = [
     family: "Rimula – Heavy Duty Engine Oil",
     icon: "🚚",
     desc: "Heavy-duty diesel engine oil designed for exceptional wear protection under harsh conditions.",
-    image: "/assets/shell/_industries/rimula.png",
+    image: "/assets/shell/_industries/rimula.webp",
     products: [
       { name: "Shell Rimula R1 20W40",    tds: "#", msds: "#" },
       { name: "Shell Rimula R2 15W40",    tds: "#", msds: "#" },
@@ -125,7 +128,7 @@ const SHELL_FAMILIES = [
     family: "Tellus – Hydraulic Oil",
     icon: "🗜️",
     desc: "Premium hydraulic fluids that help maintain system efficiency and equipment life.",
-    image: "/assets/shell/_industries/corena.png",
+    image: "/assets/shell/_industries/corena.webp",
     products: [
       { name: "Shell Tellus S2 M 32",  tds: "#", msds: null },
       { name: "Shell Tellus S2 M 46",  tds: "#", msds: null },
@@ -147,7 +150,7 @@ const SHELL_FAMILIES = [
     family: "Omala – Gear Oil",
     icon: "⚙️",
     desc: "Advanced industrial gear oils designed to reduce friction and lower operating temperatures.",
-    image: "/assets/shell/_industries/gadus.png",
+    image: "/assets/shell/_industries/gadus.webp",
     products: [
       { name: "Shell Omala S2 G 100",  tds: "#", msds: "#" },
       { name: "Shell Omala S2 G 150",  tds: "#", msds: "#" },
@@ -171,7 +174,7 @@ const SHELL_FAMILIES = [
     family: "Morlina – Bearing Oil",
     icon: "🔄",
     desc: "High quality bearing and circulating oils for industrial applications.",
-    image: "/assets/shell/_industries/gadus.png",
+    image: "/assets/shell/_industries/gadus.webp",
     products: [
       { name: "Shell Morlina S1 B 100", tds: "#", msds: "#" },
       { name: "Shell Morlina S1 B 150", tds: "#", msds: "#" },
@@ -189,7 +192,7 @@ const SHELL_FAMILIES = [
     family: "Turbin – Turbine Oil",
     icon: "⚡",
     desc: "Turbine oils formulated to protect against wear and bearing corrosion.",
-    image: "/assets/shell/_industries/mysella.png",
+    image: "/assets/shell/_industries/mysella.webp",
     products: [
       { name: "Shell Turbo T 32", tds: "#", msds: "#" },
       { name: "Shell Turbo T 46", tds: "#", msds: "#" },
@@ -204,7 +207,7 @@ const SHELL_FAMILIES = [
     family: "Spirax – Transmission Oil",
     icon: "🚘",
     desc: "Axle, gear, and automatic transmission fluids for heavy duty driveline components.",
-    image: "/assets/shell/_industries/gadus.png",
+    image: "/assets/shell/_industries/gadus.webp",
     products: [
       { name: "Shell Spirax S2 A 85W140",   tds: "#", msds: "#" },
       { name: "Shell Spirax S2 G 80W90",    tds: "#", msds: "#" },
@@ -224,7 +227,7 @@ const SHELL_FAMILIES = [
     family: "Tonna – Slide Way Oil",
     icon: "🔧",
     desc: "Specially designed for the lubrication of machine tool slideways and feed mechanisms.",
-    image: "/assets/shell/_industries/argina.png",
+    image: "/assets/shell/_industries/argina.webp",
     products: [
       { name: "Shell Tonna S2 M 68", tds: "#", msds: "#" },
     ],
@@ -236,7 +239,7 @@ const SHELL_FAMILIES = [
     family: "Heat Transfer Oil",
     icon: "🌡️",
     desc: "High-performance heat transfer fluids for enclosed circulation systems.",
-    image: "/assets/shell/_industries/corena.png",
+    image: "/assets/shell/_industries/corena.webp",
     products: [
       { name: "Shell Heat Transfer Oil S2", tds: "#", msds: "#" },
     ],
@@ -249,7 +252,7 @@ const SHELL_FAMILIES = [
     family: "Refrigeration Oil",
     icon: "❄️",
     desc: "Advanced refrigeration compressor oils suitable for varied refrigerants.",
-    image: "/assets/shell/_industries/corena.png",
+    image: "/assets/shell/_industries/corena.webp",
     products: [
       { name: "Shell Refrigeration Oil FR V 68", tds: "#", msds: "#" },
     ],
@@ -338,7 +341,7 @@ const TYROLIT_INDUSTRIES = [
     catalogKey: "Turbine Industry",
     icon: "✈️",
     desc: "Specialised high-precision grinding solutions for manufacturers of aircraft and industrial gas turbines.",
-    image: "/assets/tyrolit/_industries/turbine.png",
+    image: "/assets/tyrolit/_industries/turbine.webp",
     imageDir: "turbine",
   },
   {
@@ -346,7 +349,7 @@ const TYROLIT_INDUSTRIES = [
     catalogKey: "Technical Ceramics",
     icon: "🧱",
     desc: "Diamond and CBN grinding solutions for manufacturers of engineering ceramics, seals, and precision insulators.",
-    image: "/assets/tyrolit/_industries/ceramics.png",
+    image: "/assets/tyrolit/_industries/ceramics.webp",
     imageDir: "ceramics",
   },
   {
@@ -426,29 +429,66 @@ const TYROLIT_PRODUCT_IMAGES: Record<string, Record<string, string>> = {
 };
 
 // ─── ENQUIRY MODAL ────────────────────────────────────────────────────────────
-function EnquiryModal({ product, onClose }: { product: { name: string; family: string }; onClose: () => void }) {
+function EnquiryModal({ product, onClose }: { product: EnquiryProduct; onClose: () => void }) {
   const [form, setForm] = useState({ name: "", company: "", email: "", phone: "", qty: "", message: "" });
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [notice, setNotice] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Close on Escape, and stop the page behind the modal from scrolling.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [onClose]);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSent(true);
+    setError(null);
+    setSending(true);
+    try {
+      const result = await sendEnquiry(`Product enquiry: ${product.name}`, {
+        Product: product.name,
+        Family: product.family,
+        Name: form.name,
+        Company: form.company,
+        Email: form.email,
+        Phone: form.phone,
+        Quantity: form.qty,
+        Message: form.message,
+      });
+      if (result === "sent") setSent(true);
+      else setNotice(`Your email app should open with the message ready to send. If it doesn't, email ${OFFICE_EMAIL}.`);
+    } catch {
+      setError(`We couldn't send your enquiry. Please try again, or email ${OFFICE_EMAIL}.`);
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
     <div
       className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/50 backdrop-blur-sm p-4 pt-24"
       onClick={(e) => e.target === e.currentTarget && onClose()}
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="enquiry-title"
     >
       <div className="bg-white rounded-2xl w-full max-w-md shadow-2xl overflow-hidden mt-16 sm:mt-0 max-h-[90vh] overflow-y-auto">
         {/* Header */}
         <div className="bg-slate-900 text-white px-6 py-4 flex items-start justify-between gap-4">
           <div>
             <p className="text-xs font-semibold tracking-widest uppercase text-slate-400 mb-1">Product Enquiry</p>
-            <h3 className="font-bold text-lg leading-tight">{product.name}</h3>
+            <h3 id="enquiry-title" className="font-bold text-lg leading-tight">{product.name}</h3>
             <p className="text-xs text-slate-400 mt-0.5">{product.family}</p>
           </div>
-          <button onClick={onClose} className="text-slate-400 hover:text-white mt-1 text-xl leading-none flex-shrink-0 cursor-pointer">✕</button>
+          <button type="button" onClick={onClose} aria-label="Close enquiry" className="text-slate-400 hover:text-white mt-1 text-xl leading-none flex-shrink-0 cursor-pointer">✕</button>
         </div>
 
         {sent ? (
@@ -494,9 +534,11 @@ function EnquiryModal({ product, onClose }: { product: { name: string; family: s
               <textarea rows={3} value={form.message} onChange={e => setForm(f => ({...f, message: e.target.value}))}
                 className="w-full border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 resize-none" placeholder="Any specific requirements..." />
             </div>
-            <button type="submit"
-              className="w-full bg-brand-500 hover:bg-brand-600 active:scale-[.98] cursor-pointer text-white font-bold py-2.5 rounded-lg text-sm transition-all focus:ring-2 focus:ring-brand-400 focus:outline-none">
-              Send Enquiry →
+            {error && <p role="alert" className="text-xs text-rose-600 text-center">{error}</p>}
+            {notice && <p role="status" className="text-xs text-slate-500 text-center">{notice}</p>}
+            <button type="submit" disabled={sending}
+              className="w-full disabled:opacity-60 disabled:cursor-wait bg-brand-500 hover:bg-brand-600 active:scale-[.98] cursor-pointer text-white font-bold py-2.5 rounded-lg text-sm transition-all focus:ring-2 focus:ring-brand-400 focus:outline-none">
+              {sending ? "Sending…" : "Send Enquiry →"}
             </button>
             <p className="text-center text-xs text-slate-400">or call us at <a href="tel:+919979856997" className="text-brand-600 font-semibold hover:text-brand-700">+91 99798 56997</a></p>
           </form>
@@ -507,7 +549,7 @@ function EnquiryModal({ product, onClose }: { product: { name: string; family: s
 }
 
 // ─── SHELL PRODUCT CARD ───────────────────────────────────────────────────────
-function ShellCard({ product, onEnquire }: { product: { name: string; family: string; tds: string | null; msds: string | null }; onEnquire: (p: any) => void }) {
+function ShellCard({ product, onEnquire }: { product: { name: string; family: string; tds: string | null; msds: string | null }; onEnquire: (p: EnquiryProduct) => void }) {
   return (
     <div className="group bg-white border border-slate-100 rounded-xl p-4 hover:shadow-md hover:border-brand-300 transition-all duration-200 flex flex-col gap-3">
       <div>
@@ -616,7 +658,7 @@ function ShellFamilyCard({ item, onClick }: { item: typeof SHELL_FAMILIES[0]; on
   const hasProducts = item.products.length > 0;
   return (
     <div
-      className={`bg-white border border-slate-100 rounded-xl overflow-hidden hover:shadow-lg hover:border-brand-300 transition-all duration-300 flex flex-col ${hasProducts ? "cursor-pointer" : ""}`}
+      className={`group bg-white border border-slate-100 rounded-xl overflow-hidden hover:shadow-lg hover:border-brand-300 transition-all duration-300 flex flex-col ${hasProducts ? "cursor-pointer" : ""}`}
       onClick={hasProducts ? onClick : undefined}
     >
       <div className="w-full h-40 bg-slate-100 overflow-hidden">
@@ -659,7 +701,7 @@ function TyrolitIndustryCard({ item, onClick }: { item: typeof TYROLIT_INDUSTRIE
   const hasProducts = item.catalogKey !== null;
   return (
     <div
-      className={`bg-white border border-slate-100 rounded-xl overflow-hidden hover:shadow-lg hover:border-slate-300 transition-all duration-300 flex flex-col ${hasProducts ? "cursor-pointer" : ""}`}
+      className={`group bg-white border border-slate-100 rounded-xl overflow-hidden hover:shadow-lg hover:border-slate-300 transition-all duration-300 flex flex-col ${hasProducts ? "cursor-pointer" : ""}`}
       onClick={hasProducts ? onClick : undefined}
     >
       {/* Industry thumbnail image */}
@@ -710,7 +752,7 @@ function TyrolitProductCard({
   industryName: string;
   image: string | null;
   files: CatalogFile[];
-  onEnquire: (p: any) => void;
+  onEnquire: (p: EnquiryProduct) => void;
 }) {
   return (
     <div className="group bg-white border border-slate-100 rounded-xl overflow-hidden hover:shadow-md hover:border-slate-300 transition-all duration-200 flex flex-col">
@@ -752,7 +794,7 @@ function TyrolitProductCard({
 
         {/* Enquire button */}
         <button
-          onClick={() => onEnquire({ name: productName, family: industryName, tds: null, msds: null })}
+          onClick={() => onEnquire({ name: productName, family: industryName })}
           className="mt-auto w-full py-1.5 rounded-lg border border-slate-200 text-xs font-semibold text-slate-600 hover:border-slate-800 hover:text-slate-900 hover:bg-slate-100 transition-all cursor-pointer">
           Enquire about this product
         </button>
@@ -781,15 +823,16 @@ function EmptyState({ query, onClear }: { query: string; onClear: () => void }) 
 
 // ─── MAIN CATALOG ─────────────────────────────────────────────────────────────
 export default function Catalog() {
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const initialBrandParam = searchParams.get('brand');
   
   const [brand, setBrand] = useState(initialBrandParam?.toLowerCase() === 'tyrolit' ? "tyrolit" : "shell");
   const [activeShellFamily, setActiveShellFamily] = useState<string | null>(null);
   const [query, setQuery] = useState("");
-  const [enquiryProduct, setEnquiryProduct] = useState<{ name: string; family: string } | null>(null);
+  const [enquiryProduct, setEnquiryProduct] = useState<EnquiryProduct | null>(null);
   const [activeTyrolitIndustry, setActiveTyrolitIndustry] = useState<string | null>(null);
   const searchRef = useRef<HTMLInputElement>(null);
+  const closeEnquiry = useCallback(() => setEnquiryProduct(null), []);
 
   // Sync state with URL changes if navigation occurs
   useEffect(() => {
@@ -815,6 +858,10 @@ export default function Catalog() {
     }
     return list;
   }, [allShellProducts, activeShellFamily, query]);
+
+  // On the family overview, a search also looks inside every family, so a
+  // grade such as "S2 M 46" is found without opening Tellus first.
+  const isShellProductSearch = brand === "shell" && !activeShellFamily && query.trim() !== "";
 
   const filteredShellFamilies = useMemo(() => {
     if (!query.trim()) return SHELL_FAMILIES;
@@ -855,6 +902,8 @@ export default function Catalog() {
 
   const switchBrand = (b: string) => {
     setBrand(b);
+    // Keep the URL in step with the tab so the page can be shared or refreshed.
+    setSearchParams({ brand: b }, { replace: true });
     setActiveShellFamily(null);
     setQuery("");
     setActiveTyrolitIndustry(null);
@@ -906,7 +955,7 @@ export default function Catalog() {
 
       <div className="max-w-6xl mx-auto px-4 py-6 flex flex-col gap-8">
         {/* ── Main content ── */}
-        <main className="flex-1 min-w-0">
+        <div className="flex-1 min-w-0">
 
           {/* Search + meta */}
           <div className="flex flex-col sm:flex-row gap-3 mb-6">
@@ -917,7 +966,7 @@ export default function Catalog() {
                   brand === "shell"
                     ? activeShellFamily
                       ? `Search in ${activeShellFamily}…`
-                      : "Search families, grades…"
+                      : "Search families or grades, e.g. Tellus S2 M 46…"
                     : activeTyrolitIndustry
                       ? `Search in ${activeTyrolitIndustry}…`
                       : "Search industries…"
@@ -940,6 +989,8 @@ export default function Catalog() {
                 <span className="text-slate-300">/</span>
                 <h1 className="text-2xl font-bold text-slate-900">{activeTyrolitIndustry}</h1>
               </div>
+            ) : isShellProductSearch ? (
+              <h1 className="text-2xl font-bold text-slate-900">Shell Lubricants</h1>
             ) : brand === "shell" && activeShellFamily ? (
               <div className="flex items-center gap-3">
                 <button
@@ -959,7 +1010,7 @@ export default function Catalog() {
             )}
             <p className="text-sm text-slate-500 font-medium">
               {brand === "shell"
-                ? activeShellFamily
+                ? activeShellFamily || isShellProductSearch
                   ? <>{filteredShellProducts.length} product{filteredShellProducts.length !== 1 ? "s" : ""}</>
                   : <>{filteredShellFamilies.length} product famil{filteredShellFamilies.length !== 1 ? "ies" : "y"}</>
                 : activeTyrolitIndustry
@@ -971,7 +1022,18 @@ export default function Catalog() {
 
           {/* Product grid */}
           {brand === "shell" ? (
-            activeShellFamily ? (
+            isShellProductSearch ? (
+              /* ── Shell search results across all families ── */
+              filteredShellProducts.length > 0 ? (
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                  {filteredShellProducts.map((p) => (
+                    <ShellCard key={p.name} product={p} onEnquire={setEnquiryProduct} />
+                  ))}
+                </div>
+              ) : (
+                <EmptyState query={query} onClear={() => setQuery('')} />
+              )
+            ) : activeShellFamily ? (
               /* ── Shell inner product grid ── */
               <>
                 {/* Brochure bar for the active family */}
@@ -982,8 +1044,8 @@ export default function Catalog() {
 
                 {filteredShellProducts.length > 0 ? (
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                    {filteredShellProducts.map((p, i) => (
-                      <ShellCard key={i} product={p} onEnquire={setEnquiryProduct} />
+                    {filteredShellProducts.map((p) => (
+                      <ShellCard key={p.name} product={p} onEnquire={setEnquiryProduct} />
                     ))}
                   </div>
                 ) : (
@@ -1040,12 +1102,12 @@ export default function Catalog() {
               <EmptyState query={query} onClear={() => setQuery('')} />
             )
           )}
-        </main>
+        </div>
       </div>
 
       {/* Enquiry Modal */}
       {enquiryProduct && (
-        <EnquiryModal product={enquiryProduct} onClose={() => setEnquiryProduct(null)} />
+        <EnquiryModal product={enquiryProduct} onClose={closeEnquiry} />
       )}
     </div>
   );
