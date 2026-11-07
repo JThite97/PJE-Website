@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import { 
   Activity, 
   Recycle, 
@@ -84,8 +85,9 @@ export default function Services() {
   return (
     <div className="w-full min-h-screen bg-paper">
       <SEO 
-        title="Technical Services | PJ Enterprise" 
-        description="Expert technical support, oil condition monitoring, and value-added industrial services to maximize your operational efficiency."
+        title="Shell LubeAnalyst & Industrial Services | PJ Enterprise Vadodara" 
+        description="Expert Shell lubricant services in Vadodara — oil condition monitoring (LubeAnalyst), technical consulting, fluid management & predictive maintenance for Gujarat industries."
+        path="/services"
       />
       {/* Page Header - Dark Immersive */}
       <section className="bg-ink-900 pt-32 pb-20 text-center relative overflow-hidden">
@@ -94,7 +96,8 @@ export default function Services() {
             src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=2070"
             alt="Services Background"
             className="w-full h-full object-cover opacity-20"
-            loading="lazy"
+            loading="eager"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-ink-900/80 to-ink-900"></div>
         </div>
@@ -119,7 +122,7 @@ export default function Services() {
       </section>
 
       {/* Shell Services - Split Layout with Sticky Image */}
-      <section className="py-24 bg-white">
+      <section id="support" className="py-24 bg-white scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-16 items-start">
             
@@ -134,10 +137,9 @@ export default function Services() {
               >
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-yellow-50 border border-yellow-200 text-yellow-700 text-sm font-bold mb-6">
                   <img 
-                    src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e8/Shell_logo.svg/120px-Shell_logo.svg.png" 
+                    src="/shell-4.svg" 
                     alt="Shell" 
                     className="h-4 mr-2"
-                    referrerPolicy="no-referrer"
                     loading="lazy"
                   />
                   Shell Services Portfolio
@@ -210,7 +212,7 @@ export default function Services() {
       </section>
       
       {/* CTA Section */}
-      <section className="py-20 bg-ink-900 text-white relative overflow-hidden">
+      <section id="consulting" className="scroll-mt-24 py-20 bg-ink-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=2070')] bg-cover bg-center mix-blend-luminosity"></div>
         </div>
@@ -219,13 +221,13 @@ export default function Services() {
           <p className="text-xl text-slate-300 mb-10 font-light max-w-2xl mx-auto">
             Contact our technical experts today to discuss which Shell services can bring the most value to your specific industry applications.
           </p>
-          <a 
-            href="/contact" 
-            className="inline-flex items-center px-8 py-4 rounded-full bg-brand-600 text-white font-medium hover:bg-brand-500 transition-all shadow-lg shadow-brand-600/20"
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center px-8 py-4 rounded-[50px] bg-brand-600 text-white font-medium hover:bg-brand-electric hover:text-ink-900 transition-all shadow-md hover:shadow-[0_0_15px_var(--color-brand-electric)]"
           >
             Consult an Expert
             <ArrowRight className="ml-2" size={20} />
-          </a>
+          </Link>
         </div>
       </section>
     </div>

@@ -21,23 +21,29 @@ export default function Navbar() {
     setIsMobileMenuOpen(false);
   }, [location.pathname]);
 
+  const isDarkNav = isScrolled || location.pathname === '/catalog';
+
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
     { name: 'Products', href: '/products' },
+    { name: 'Catalog', href: '/catalog' },
     { name: 'Services', href: '/services' },
   ];
 
   return (
+    // ✅ FIXED: Added role and aria-label for accessibility
     <nav
+      role="navigation"
+      aria-label="Main navigation"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? 'pt-4 px-4 sm:px-6 lg:px-8' : 'pt-6 px-4 sm:px-6 lg:px-8'
       }`}
     >
       <div 
         className={`max-w-7xl mx-auto transition-all duration-300 rounded-2xl ${
-          isScrolled 
-            ? 'bg-white/95 backdrop-blur-md shadow-sm border border-slate-200 py-3 px-6' 
+          isDarkNav 
+            ? 'bg-ink-900/95 sm:bg-ink-900/80 backdrop-blur-xl shadow-sm border border-white/10 py-3 px-6' 
             : 'bg-transparent py-2 px-2 sm:px-4'
         }`}
       >
@@ -45,9 +51,9 @@ export default function Navbar() {
           <div className="flex items-center">
             <Link to="/" className="text-2xl sm:text-3xl font-bold tracking-tighter font-display">
               <span className="text-accent">PJ</span>
-              <span className={isScrolled ? "text-ink-900" : "text-white"}> </span>
+              <span className="text-white"> </span>
               <span className="text-accent">E</span>
-              <span className={isScrolled ? "text-ink-900" : "text-white"}>nterprise</span>
+              <span className="text-white">nterprise</span>
             </Link>
           </div>
 
@@ -57,21 +63,24 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 to={link.href}
-                className={`text-base font-medium transition-colors hover:text-brand-500 ${
+                className={`relative text-base font-medium transition-colors hover:text-white ${
                   location.pathname === link.href 
-                    ? 'text-brand-500' 
-                    : isScrolled ? 'text-slate-600' : 'text-slate-200'
+                    ? 'text-white' 
+                    : isDarkNav ? 'text-slate-300' : 'text-slate-200'
                 }`}
               >
                 {link.name}
+                {location.pathname === link.href && (
+                  <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-brand-electric shadow-[0_0_8px_var(--color-brand-electric)]"></span>
+                )}
               </Link>
             ))}
             <Link
               to="/contact"
-              className={`px-6 py-2.5 rounded-full text-base font-medium transition-all shadow-md hover:shadow-lg ${
-                isScrolled 
-                  ? 'bg-brand-600 text-white hover:bg-brand-700 shadow-brand-600/20' 
-                  : 'bg-white text-brand-600 hover:bg-slate-50'
+              className={`px-6 py-2.5 rounded-[50px] text-base font-medium transition-all shadow-md hover:shadow-[0_0_15px_rgba(0,229,255,0.4)] ${
+                isDarkNav 
+                  ? 'bg-brand-600 text-white shadow-brand-600/20 hover:bg-brand-electric hover:text-ink-900' 
+                  : 'bg-white text-brand-600 hover:bg-brand-electric hover:text-ink-900'
               }`}
             >
               Contact Us
@@ -80,11 +89,13 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
+            {/* ✅ FIXED: Added aria-label, aria-expanded, aria-controls for accessibility */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`p-2 rounded-lg transition-colors ${
-                isScrolled ? 'text-ink-900 hover:bg-slate-100' : 'text-white hover:bg-white/10'
-              }`}
+              className="p-2 rounded-lg transition-colors text-white hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-electric"
+              aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-menu"
             >
               {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -99,7 +110,8 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="md:hidden absolute top-full left-4 right-4 mt-2 bg-white rounded-2xl border border-slate-100 shadow-xl overflow-hidden"
+            id="mobile-menu"
+            className="md:hidden absolute top-full left-4 right-4 mt-2 bg-white rounded-2xl border border-slate-100 shadow-2xl overflow-hidden z-50 pointer-events-auto"
           >
             <div className="px-4 pt-4 pb-6 space-y-2">
               {navLinks.map((link) => (

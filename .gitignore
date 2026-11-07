@@ -6,3 +6,6 @@ coverage/
 *.log
 .env*
 !.env.example
+# ✅ FIXED: Prevent re-adding test utility files
+test-urls.js
+scripts/shell-epc-report.json

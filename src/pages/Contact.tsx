@@ -1,29 +1,65 @@
 import React, { useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle2 } from 'lucide-react';
 import SEO from '../components/SEO';
+import { sendEnquiry, OFFICE_EMAIL } from '../lib/enquiry';
+
+const SUBJECTS: Record<string, string> = {
+  sales: 'Sales Inquiry',
+  support: 'Technical Support',
+  partnership: 'Partnership Opportunities',
+  other: 'Other',
+};
 
 export default function Contact() {
+  const [searchParams] = useSearchParams();
+  const subjectParam = searchParams.get('subject') ?? '';
+  const productParam = searchParams.get('product') ?? '';
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [notice, setNotice] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Simulate form submission to third-party endpoint
-    const form = e.target as HTMLFormElement;
-    
-    // In production, this would be an actual fetch to Formspree or EmailJS
-    // fetch('https://formspree.io/f/placeholder', { method: 'POST', body: new FormData(form) })
-    
-    setIsSubmitted(true);
-    form.reset();
-    setTimeout(() => setIsSubmitted(false), 5000);
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const get = (k: string) => String(data.get(k) ?? '').trim();
+    const subjectLabel = SUBJECTS[get('subject')] ?? 'Website enquiry';
+
+    setError(null);
+    setNotice(null);
+    setIsSending(true);
+    try {
+      const result = await sendEnquiry(`${subjectLabel} from ${get('first_name')} ${get('last_name')}`, {
+        Name: `${get('first_name')} ${get('last_name')}`,
+        Company: get('company'),
+        Email: get('email'),
+        Phone: get('phone'),
+        Subject: subjectLabel,
+        Message: get('message'),
+      });
+      if (result === 'sent') {
+        setIsSubmitted(true);
+        form.reset();
+        setTimeout(() => setIsSubmitted(false), 5000);
+      } else {
+        setNotice(`Your email app should open with the message ready to send. If it doesn't, email us at ${OFFICE_EMAIL}.`);
+      }
+    } catch {
+      setError(`We couldn't send your message. Please try again, or email us at ${OFFICE_EMAIL}.`);
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
     <div className="w-full min-h-screen bg-slate-50">
       <SEO 
-        title="Contact Us | PJ Enterprise" 
-        description="Get in touch with the industrial experts at PJ Enterprise. Request quotes, technical support, or consultation."
+        title="Contact PJ Enterprise Vadodara | Shell Lubricant Enquiry" 
+        description="Contact PJ Enterprise in GIDC Makarpura, Vadodara for Shell oil quotes, technical support, and industrial product enquiries. Call +91-9979856997."
+        path="/contact"
       />
       {/* Page Header */}
       <section className="bg-slate-900 pt-32 pb-20 text-center relative overflow-hidden">
@@ -32,7 +68,8 @@ export default function Contact() {
             src="https://images.unsplash.com/photo-1587560699334-cc4ff634909a?auto=format&fit=crop&q=80&w=2070"
             alt="Contact Us Background"
             className="w-full h-full object-cover opacity-20"
-            loading="lazy"
+            loading="eager"
+            fetchPriority="high"
           />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -94,7 +131,9 @@ export default function Contact() {
                   <div className="ml-6">
                     <h3 className="text-xl font-bold text-slate-900 mb-1">Phone</h3>
                     <p className="text-slate-600">
-                      +91-9979856997
+                      <a href="tel:+919979856997" className="hover:text-brand-600 transition-colors">
+                        +91-9979856997
+                      </a>
                     </p>
                   </div>
                 </div>
@@ -106,7 +145,9 @@ export default function Contact() {
                   <div className="ml-6">
                     <h3 className="text-xl font-bold text-slate-900 mb-1">Email</h3>
                     <p className="text-slate-600">
-                      office@pjenterprise.in
+                      <a href="mailto:office@pjenterprise.in" className="hover:text-brand-600 transition-colors">
+                        office@pjenterprise.in
+                      </a>
                     </p>
                   </div>
                 </div>
@@ -132,7 +173,7 @@ export default function Contact() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-slate-100"
+              className="bg-white p-8 md:p-14 rounded-3xl shadow-2xl border border-slate-100"
             >
               <h3 className="text-2xl font-bold text-slate-900 mb-6">Send us a Message</h3>
               
@@ -152,10 +193,9 @@ export default function Contact() {
                 </motion.div>
               ) : (
                 <form 
+                  key={searchParams.toString()}
                   onSubmit={handleSubmit} 
                   className="space-y-6"
-                  action="https://formspree.io/f/placeholder"
-                  method="POST"
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
@@ -165,7 +205,7 @@ export default function Contact() {
                         name="first_name"
                         id="firstName" 
                         required
-                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white"
+                        className="w-full px-0 py-3 bg-transparent border-0 border-b border-slate-300 focus:ring-0 focus:border-brand-electric rounded-none outline-none transition-all text-slate-900 placeholder:text-slate-400"
                         placeholder="John"
                       />
                     </div>
@@ -176,7 +216,7 @@ export default function Contact() {
                         name="last_name"
                         id="lastName" 
                         required
-                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white"
+                        className="w-full px-0 py-3 bg-transparent border-0 border-b border-slate-300 focus:ring-0 focus:border-brand-electric rounded-none outline-none transition-all text-slate-900 placeholder:text-slate-400"
                         placeholder="Doe"
                       />
                     </div>
@@ -188,7 +228,7 @@ export default function Contact() {
                       type="text" 
                       name="company"
                       id="company" 
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white"
+                      className="w-full px-0 py-3 bg-transparent border-0 border-b border-slate-300 focus:ring-0 focus:border-brand-electric rounded-none outline-none transition-all text-slate-900 placeholder:text-slate-400"
                       placeholder="Your Company Ltd."
                     />
                   </div>
@@ -201,7 +241,7 @@ export default function Contact() {
                         name="email"
                         id="email" 
                         required
-                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white"
+                        className="w-full px-0 py-3 bg-transparent border-0 border-b border-slate-300 focus:ring-0 focus:border-brand-electric rounded-none outline-none transition-all text-slate-900 placeholder:text-slate-400"
                         placeholder="john@company.com"
                       />
                     </div>
@@ -211,7 +251,7 @@ export default function Contact() {
                         type="tel" 
                         name="phone"
                         id="phone" 
-                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white"
+                        className="w-full px-0 py-3 bg-transparent border-0 border-b border-slate-300 focus:ring-0 focus:border-brand-electric rounded-none outline-none transition-all text-slate-900 placeholder:text-slate-400"
                         placeholder="+91 XXXXX XXXXX"
                       />
                     </div>
@@ -223,7 +263,8 @@ export default function Contact() {
                       id="subject" 
                       name="subject"
                       required
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white appearance-none"
+                      defaultValue={SUBJECTS[subjectParam] ? subjectParam : ''}
+                      className="w-full px-0 py-3 bg-transparent border-0 border-b border-slate-300 focus:ring-0 focus:border-brand-electric rounded-none outline-none transition-all text-slate-900 placeholder:text-slate-400"
                     >
                       <option value="">Select a subject...</option>
                       <option value="sales">Sales Inquiry</option>
@@ -239,19 +280,27 @@ export default function Contact() {
                       id="message" 
                       name="message"
                       required
+                      defaultValue={productParam ? `I'd like to know more about your ${productParam} products.` : ''}
                       rows={4}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white resize-none"
+                      className="w-full px-0 py-3 bg-transparent border-0 border-b border-slate-300 focus:ring-0 focus:border-brand-electric rounded-none outline-none transition-all text-slate-900 placeholder:text-slate-400 resize-none"
                       placeholder="How can we help you?"
                     ></textarea>
                   </div>
 
                   <button 
                     type="submit"
-                    className="w-full py-4 px-6 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg transition-colors flex items-center justify-center gap-2 shadow-lg shadow-blue-600/20"
+                    disabled={isSending}
+                    className="w-full py-4 px-6 rounded-[50px] bg-brand-600 hover:bg-brand-electric hover:text-ink-900 text-white font-bold text-lg transition-all disabled:opacity-60 disabled:cursor-wait flex items-center justify-center gap-2 shadow-md hover:shadow-[0_0_15px_var(--color-brand-electric)]"
                   >
                     <Send size={20} />
-                    Send Message
+                    {isSending ? 'Sending…' : 'Send Message'}
                   </button>
+                  {error && (
+                    <p role="alert" className="text-sm text-rose-600 text-center">{error}</p>
+                  )}
+                  {notice && (
+                    <p role="status" className="text-sm text-slate-500 text-center">{notice}</p>
+                  )}
                 </form>
               )}
             </motion.div>

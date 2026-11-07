@@ -7,6 +7,7 @@ export default function Terms() {
       <SEO 
         title="Terms of Service | PJ Enterprise" 
         description="Read the terms and conditions that govern your use of the PJ Enterprise website and our industrial products."
+        path="/terms"
       />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div

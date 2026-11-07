@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
-import { ArrowRight, Calendar, User } from 'lucide-react';
+import { ArrowRight, Calendar, User, BookOpen } from 'lucide-react';
 
 const mockPosts = [
   {
@@ -9,7 +10,8 @@ const mockPosts = [
     date: "March 15, 2026",
     author: "Technical Team",
     category: "Technical Guide",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800"
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800",
+    comingSoon: false,
   },
   {
     title: "The Transition to Shell Tellus S4: Is it Worth It?",
@@ -17,7 +19,8 @@ const mockPosts = [
     date: "February 28, 2026",
     author: "Jigish Shah",
     category: "Product Review",
-    image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&q=80&w=800"
+    image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&q=80&w=800",
+    comingSoon: false,
   },
   {
     title: "5 Signs Your Grinding Wheels Need Immediate Replacement",
@@ -25,7 +28,8 @@ const mockPosts = [
     date: "February 10, 2026",
     author: "Safety Compliance",
     category: "Safety",
-    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=800"
+    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=800",
+    comingSoon: false,
   }
 ];
 
@@ -35,18 +39,28 @@ export default function Blog() {
       <SEO 
         title="Industrial Resources & Blog | PJ Enterprise" 
         description="Expert insights, technical guides, and industry news for optimizing your manufacturing and industrial operations."
+        path="/blog"
       />
       
       {/* Header */}
       <section className="bg-ink-900 pt-32 pb-20 text-center relative overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&q=80&w=2070')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&q=80&w=2070"
+            alt=""
+            aria-hidden="true"
+            className="w-full h-full object-cover opacity-20"
+            loading="eager"
+            fetchPriority="high"
+          />
+        </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight font-display"
           >
-            Insights & Resources
+            Insights &amp; Resources
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -62,6 +76,16 @@ export default function Blog() {
       {/* Blog Grid */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Coming-soon notice */}
+          <div className="mb-10 flex items-start gap-3 bg-amber-50 border border-amber-200 rounded-2xl px-6 py-4">
+            <BookOpen size={20} className="text-amber-600 flex-shrink-0 mt-0.5" />
+            <p className="text-sm text-amber-800 leading-relaxed">
+              <span className="font-bold">Full articles coming soon.</span> Our team is finalising these guides. Use the previews below to get a sense of upcoming content — or{' '}
+              <Link to="/contact" className="underline font-semibold hover:text-amber-900">contact us directly</Link> for technical advice.
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {mockPosts.map((post, index) => (
               <motion.article 
@@ -80,9 +104,12 @@ export default function Blog() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
-                  <div className="absolute top-4 left-4 z-20">
+                  <div className="absolute top-4 left-4 z-20 flex gap-2">
                     <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-brand-700 text-xs font-bold rounded-full uppercase tracking-wider">
                       {post.category}
+                    </span>
+                    <span className="px-3 py-1 bg-amber-500/90 backdrop-blur-sm text-white text-xs font-bold rounded-full uppercase tracking-wider">
+                      Coming Soon
                     </span>
                   </div>
                 </div>
@@ -93,26 +120,20 @@ export default function Blog() {
                     <span className="flex items-center"><User size={14} className="mr-1" /> {post.author}</span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-slate-900 mb-3 font-display leading-tight group-hover:text-brand-600 transition-colors">
-                    <a href="#">{post.title}</a>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3 font-display leading-tight">
+                    {post.title}
                   </h3>
                   
                   <p className="text-slate-600 mb-6 flex-grow">{post.excerpt}</p>
                   
                   <div className="mt-auto pt-6 border-t border-slate-100">
-                    <a href="#" className="inline-flex items-center text-brand-600 font-medium group-hover:text-brand-700">
-                      Read Article <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
-                    </a>
+                    <span className="inline-flex items-center text-slate-400 text-sm font-medium cursor-default select-none">
+                      <ArrowRight size={16} className="mr-2" /> Article in progress
+                    </span>
                   </div>
                 </div>
               </motion.article>
             ))}
-          </div>
-
-          <div className="mt-16 text-center">
-            <button className="px-8 py-4 rounded-full border-2 border-slate-200 text-slate-600 font-bold hover:border-brand-600 hover:text-brand-600 transition-colors">
-              Load More Articles
-            </button>
           </div>
         </div>
       </section>

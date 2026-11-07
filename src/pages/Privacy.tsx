@@ -7,6 +7,7 @@ export default function Privacy() {
       <SEO 
         title="Privacy Policy | PJ Enterprise" 
         description="Learn about how PJ Enterprise collects, uses, and protects your personal data in our Privacy Policy."
+        path="/privacy"
       />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
