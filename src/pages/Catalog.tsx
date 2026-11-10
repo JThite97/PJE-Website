@@ -240,7 +240,7 @@ const SHELL_FAMILIES = [
     family: "Heat Transfer Oil",
     icon: Thermometer,
     desc: "High-performance heat transfer fluids for enclosed circulation systems.",
-    image: "",
+    image: "/assets/shell/_industries/heat-transfer.webp",
     products: [
       { name: "Shell Heat Transfer Oil S2", tds: "#", msds: "#" },
     ],
@@ -253,7 +253,7 @@ const SHELL_FAMILIES = [
     family: "Refrigeration Oil",
     icon: Snowflake,
     desc: "Advanced refrigeration compressor oils suitable for varied refrigerants.",
-    image: "",
+    image: "/assets/shell/_industries/refrigeration.webp",
     products: [
       { name: "Shell Refrigeration Oil FR V 68", tds: "#", msds: "#" },
     ],
@@ -663,18 +663,12 @@ function ShellFamilyCard({ item, onClick }: { item: typeof SHELL_FAMILIES[0]; on
       onClick={hasProducts ? onClick : undefined}
     >
       <div className="w-full h-40 bg-slate-100 overflow-hidden">
-        {item.image ? (
-          <img
-            src={item.image}
-            alt={item.family}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            loading="lazy"
-          />
-        ) : (
-          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-yellow-50 via-amber-100 to-yellow-200 text-amber-600">
-            <item.icon size={56} strokeWidth={1.25} aria-hidden="true" />
-          </div>
-        )}
+        <img
+          src={item.image}
+          alt={item.family}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          loading="lazy"
+        />
       </div>
 
       <div className="p-5 flex flex-col gap-3 flex-1">
