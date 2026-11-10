@@ -35,28 +35,31 @@ export default function FAQ() {
   };
 
   return (
-    <div className="w-full min-h-screen bg-slate-50 pt-32 pb-24">
+    <div className="w-full min-h-screen bg-slate-50 pb-24">
       <SEO 
         title="Frequently Asked Questions (FAQ) | PJ Enterprise" 
         description="Find answers to common questions about PJ Enterprise's products, services, delivery areas, and technical support."
         path="/faq"
       />
       
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+      <section className="bg-slate-900 pt-32 pb-20 text-center relative overflow-hidden">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-brand-100 text-brand-600 mb-6">
-              <HelpCircle size={32} />
+            <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-white/10 text-brand-electric mb-6">
+              <HelpCircle size={28} />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight font-display">Frequently Asked Questions</h1>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto font-light">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">Frequently Asked Questions</h1>
+            <p className="text-lg text-slate-300 max-w-2xl mx-auto">
               Everything you need to know about partnering with PJ Enterprise.
             </p>
           </motion.div>
         </div>
+      </section>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
 
         <div className="space-y-3">
           {faqs.map((faq, index) => {

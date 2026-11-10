@@ -21,7 +21,10 @@ export default function Navbar() {
     setIsMobileMenuOpen(false);
   }, [location.pathname]);
 
-  const isDarkNav = isScrolled || location.pathname === '/catalog';
+  // Pages that open with a dark hero band can start with a transparent nav;
+  // every other page needs the solid bar so the white text stays readable.
+  const DARK_HERO_PAGES = ['/', '/about', '/products', '/services', '/contact', '/blog', '/faq', '/catalog'];
+  const isDarkNav = isScrolled || !DARK_HERO_PAGES.includes(location.pathname);
 
   const navLinks = [
     { name: 'Home', href: '/' },
