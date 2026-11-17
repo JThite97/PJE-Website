@@ -48,7 +48,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-ink-900/90 via-ink-900/60 to-ink-900"></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-28 pb-32">
           <ScrollReveal delay={0} className="inline-flex items-center px-4 py-2 rounded-[50px] bg-white/10 border border-white/20 text-white text-sm font-medium mb-8 backdrop-blur-sm eyebrow">
             <span className="flex h-2 w-2 rounded-[50px] bg-brand-electric mr-2 animate-pulse shadow-[0_0_8px_var(--color-brand-electric)]"></span>
             Precision Industrial Solutions
@@ -88,7 +88,7 @@ export default function Home() {
 
         <ScrollReveal
           delay={1000}
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 animate-bounce"
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce"
         >
           <a href="#about-company" className="text-slate-400 hover:text-brand-electric transition-colors">
             <ChevronDown size={32} />
@@ -191,8 +191,8 @@ export default function Home() {
             {testimonials.map((testimonial, index) => (
               <ScrollReveal delay={index * 100} key={index}>
                 <div className="bg-white/5 p-8 border border-white/10 relative h-full hover:border-white/20 transition-colors">
-                  <Quote className="absolute top-6 right-6 text-slate-700 w-10 h-10" />
-                  <p className="text-slate-300 leading-relaxed mb-6 relative z-10 font-light">
+                  <Quote className="text-brand-electric/40 w-9 h-9 mb-4" aria-hidden="true" />
+                  <p className="text-slate-300 leading-relaxed mb-6 font-light">
                     "{testimonial.text}"
                   </p>
                   <div className="flex items-center">

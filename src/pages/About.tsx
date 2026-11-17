@@ -98,7 +98,7 @@ export default function About() {
                 Mr. Jigish Shah
               </h2>
               <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                Establishing P J Enterprise at the age of 33 in 2007, Mr. Jigish Shah embarked on a journey to redefine the distribution business. With a keen eye for quality and an unwavering commitment to customer satisfaction, he has been the driving force behind the company's growth for over a decade.
+                Establishing P J Enterprise at the age of 33 in 2007, Mr. Jigish Shah embarked on a journey to redefine the distribution business. With a keen eye for quality and an unwavering commitment to customer satisfaction, he has been the driving force behind the company's growth for more than 19 years.
               </p>
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
                 Under his leadership, P J Enterprise shifted the industry paradigm from mere product selling to true "Value-Selling." His vision was clear: to thoroughly understand the exact needs of the customer and provide tailored solutions that deliver optimal performance at the right cost. This philosophy has been instrumental in forging strong, lasting partnerships with global giants like Shell, Tyrolit, Quaker Houghton, and EWAC Alloys.
@@ -217,7 +217,7 @@ export default function About() {
               { value: '19+', label: 'Years in Business', color: 'bg-blue-50 text-blue-600 border-blue-100' },
               { value: '1500+', label: 'Satisfied Customers', color: 'bg-emerald-50 text-emerald-600 border-emerald-100' },
               { value: '10', label: 'Qualified Engineers', color: 'bg-purple-50 text-purple-600 border-purple-100' },
-              { value: '4', label: 'Global Brand Partners', color: 'bg-amber-50 text-amber-600 border-amber-100' },
+              { value: '5', label: 'Brand Partners', color: 'bg-amber-50 text-amber-600 border-amber-100' },
               { value: '2', label: 'States Served', color: 'bg-rose-50 text-rose-600 border-rose-100' },
             ].map((stat) => (
               <div key={stat.label} className={`rounded-2xl border p-6 text-center ${stat.color} flex flex-col items-center justify-center gap-2`}>

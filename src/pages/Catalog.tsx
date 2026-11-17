@@ -1,6 +1,7 @@
 import { useState, useMemo, useRef, useEffect, useCallback } from "react";
 import { useSearchParams } from "react-router-dom";
 import SEO from "../components/SEO";
+import { BrickWall, Car, Cog, Factory, Flame, Gauge, Plane, RotateCw, Ship, Snowflake, Stethoscope, Target, Thermometer, Truck, Wind, Wrench, Zap } from "lucide-react";
 import catalogData from "../data/catalog.json";
 import { sendEnquiry, OFFICE_EMAIL } from "../lib/enquiry";
 
@@ -25,7 +26,7 @@ interface CatalogIndustry {
 const SHELL_FAMILIES = [
   {
     family: "Argina – Marine Engine Oil",
-    icon: "🚢",
+    icon: Ship,
     desc: "Premium trunk piston engine oil designed for medium-speed marine diesel engines.",
     image: "/assets/shell/_industries/argina.webp",
     products: [
@@ -38,7 +39,7 @@ const SHELL_FAMILIES = [
   },
   {
     family: "Corena – Compressor Oil",
-    icon: "💨",
+    icon: Wind,
     desc: "High-performance air compressor oils to ensure long equipment life.",
     image: "/assets/shell/_industries/corena.webp",
     products: [
@@ -60,7 +61,7 @@ const SHELL_FAMILIES = [
   },
   {
     family: "Gadus – Grease",
-    icon: "⚙️",
+    icon: Cog,
     desc: "Lithium and specialty greases for enhanced wear protection in bearings and joints.",
     image: "/assets/shell/_industries/gadus.webp",
     products: [
@@ -91,7 +92,7 @@ const SHELL_FAMILIES = [
   },
   {
     family: "Mysella – Gas Engine Oil",
-    icon: "🔥",
+    icon: Flame,
     desc: "Premium quality oil for stationary gas engines running on natural gas.",
     image: "/assets/shell/_industries/mysella.webp",
     products: [
@@ -107,7 +108,7 @@ const SHELL_FAMILIES = [
   },
   {
     family: "Rimula – Heavy Duty Engine Oil",
-    icon: "🚚",
+    icon: Truck,
     desc: "Heavy-duty diesel engine oil designed for exceptional wear protection under harsh conditions.",
     image: "/assets/shell/_industries/rimula.webp",
     products: [
@@ -126,9 +127,9 @@ const SHELL_FAMILIES = [
   },
   {
     family: "Tellus – Hydraulic Oil",
-    icon: "🗜️",
+    icon: Gauge,
     desc: "Premium hydraulic fluids that help maintain system efficiency and equipment life.",
-    image: "/assets/shell/_industries/corena.webp",
+    image: "/assets/shell/_industries/tellus.webp",
     products: [
       { name: "Shell Tellus S2 M 32",  tds: "#", msds: null },
       { name: "Shell Tellus S2 M 46",  tds: "#", msds: null },
@@ -148,9 +149,9 @@ const SHELL_FAMILIES = [
   },
   {
     family: "Omala – Gear Oil",
-    icon: "⚙️",
+    icon: Cog,
     desc: "Advanced industrial gear oils designed to reduce friction and lower operating temperatures.",
-    image: "/assets/shell/_industries/gadus.webp",
+    image: "/assets/shell/_industries/omala.webp",
     products: [
       { name: "Shell Omala S2 G 100",  tds: "#", msds: "#" },
       { name: "Shell Omala S2 G 150",  tds: "#", msds: "#" },
@@ -172,9 +173,9 @@ const SHELL_FAMILIES = [
   },
   {
     family: "Morlina – Bearing Oil",
-    icon: "🔄",
+    icon: RotateCw,
     desc: "High quality bearing and circulating oils for industrial applications.",
-    image: "/assets/shell/_industries/gadus.webp",
+    image: "/assets/shell/_industries/morlina.webp",
     products: [
       { name: "Shell Morlina S1 B 100", tds: "#", msds: "#" },
       { name: "Shell Morlina S1 B 150", tds: "#", msds: "#" },
@@ -190,9 +191,9 @@ const SHELL_FAMILIES = [
   },
   {
     family: "Turbin – Turbine Oil",
-    icon: "⚡",
+    icon: Zap,
     desc: "Turbine oils formulated to protect against wear and bearing corrosion.",
-    image: "/assets/shell/_industries/mysella.webp",
+    image: "/assets/shell/_industries/turbin.webp",
     products: [
       { name: "Shell Turbo T 32", tds: "#", msds: "#" },
       { name: "Shell Turbo T 46", tds: "#", msds: "#" },
@@ -205,9 +206,9 @@ const SHELL_FAMILIES = [
   },
   {
     family: "Spirax – Transmission Oil",
-    icon: "🚘",
+    icon: Car,
     desc: "Axle, gear, and automatic transmission fluids for heavy duty driveline components.",
-    image: "/assets/shell/_industries/gadus.webp",
+    image: "/assets/shell/_industries/spirax.webp",
     products: [
       { name: "Shell Spirax S2 A 85W140",   tds: "#", msds: "#" },
       { name: "Shell Spirax S2 G 80W90",    tds: "#", msds: "#" },
@@ -225,9 +226,9 @@ const SHELL_FAMILIES = [
   },
   {
     family: "Tonna – Slide Way Oil",
-    icon: "🔧",
+    icon: Wrench,
     desc: "Specially designed for the lubrication of machine tool slideways and feed mechanisms.",
-    image: "/assets/shell/_industries/argina.webp",
+    image: "/assets/shell/_industries/tonna.webp",
     products: [
       { name: "Shell Tonna S2 M 68", tds: "#", msds: "#" },
     ],
@@ -237,9 +238,9 @@ const SHELL_FAMILIES = [
   },
   {
     family: "Heat Transfer Oil",
-    icon: "🌡️",
+    icon: Thermometer,
     desc: "High-performance heat transfer fluids for enclosed circulation systems.",
-    image: "/assets/shell/_industries/corena.webp",
+    image: "/assets/shell/_industries/heat-transfer.webp",
     products: [
       { name: "Shell Heat Transfer Oil S2", tds: "#", msds: "#" },
     ],
@@ -250,9 +251,9 @@ const SHELL_FAMILIES = [
   },
   {
     family: "Refrigeration Oil",
-    icon: "❄️",
+    icon: Snowflake,
     desc: "Advanced refrigeration compressor oils suitable for varied refrigerants.",
-    image: "/assets/shell/_industries/corena.webp",
+    image: "/assets/shell/_industries/refrigeration.webp",
     products: [
       { name: "Shell Refrigeration Oil FR V 68", tds: "#", msds: "#" },
     ],
@@ -291,7 +292,7 @@ const TYROLIT_INDUSTRIES = [
   {
     industry: "Automotive Industry",
     catalogKey: "Automotive Industry",
-    icon: "🔩",
+    icon: Car,
     desc: "Precision grinding solutions for the production of automotive parts with the highest dimensional accuracy.",
     image: "/assets/tyrolit/_industries/automotive.webp",
     imageDir: "automotive",
@@ -299,7 +300,7 @@ const TYROLIT_INDUSTRIES = [
   {
     industry: "Bearing Industry",
     catalogKey: "Bearing Industry",
-    icon: "⚙️",
+    icon: Cog,
     desc: "Tailored grinding tools for cost-effective solutions across the entire bearing production process.",
     image: "/assets/tyrolit/_industries/bearing.webp",
     imageDir: "bearing",
@@ -307,7 +308,7 @@ const TYROLIT_INDUSTRIES = [
   {
     industry: "Precision Industry",
     catalogKey: "Precision Industry",
-    icon: "🎯",
+    icon: Target,
     desc: "Extensive range of tools and system solutions for precision engineering applications, including watchmaking and micro-grinding.",
     image: "/assets/tyrolit/_industries/precision.webp",
     imageDir: "precision",
@@ -315,7 +316,7 @@ const TYROLIT_INDUSTRIES = [
   {
     industry: "Steel & Foundry",
     catalogKey: "Steel and Foundry Industry",
-    icon: "🏭",
+    icon: Factory,
     desc: "Market-leading solutions for machining high-alloyed steels with years of proven expertise.",
     image: "/assets/tyrolit/_industries/steel-foundry.webp",
     imageDir: "steel-foundry",
@@ -323,7 +324,7 @@ const TYROLIT_INDUSTRIES = [
   {
     industry: "Tooling Industry",
     catalogKey: "Tooling Industry",
-    icon: "🔧",
+    icon: Wrench,
     desc: "System supplier to tool manufacturers offering particularly versatile and durable grinding solutions.",
     image: "/assets/tyrolit/_industries/tooling.webp",
     imageDir: "tooling",
@@ -331,7 +332,7 @@ const TYROLIT_INDUSTRIES = [
   {
     industry: "Medical Technology",
     catalogKey: "Medical Technology",
-    icon: "⚕️",
+    icon: Stethoscope,
     desc: "Competent partner with numerous system solutions for the exacting demands of medical device manufacturing.",
     image: "/assets/tyrolit/_industries/medical.webp",
     imageDir: "medical",
@@ -339,7 +340,7 @@ const TYROLIT_INDUSTRIES = [
   {
     industry: "Turbine Industry",
     catalogKey: "Turbine Industry",
-    icon: "✈️",
+    icon: Plane,
     desc: "Specialised high-precision grinding solutions for manufacturers of aircraft and industrial gas turbines.",
     image: "/assets/tyrolit/_industries/turbine.webp",
     imageDir: "turbine",
@@ -347,7 +348,7 @@ const TYROLIT_INDUSTRIES = [
   {
     industry: "Technical Ceramics",
     catalogKey: "Technical Ceramics",
-    icon: "🧱",
+    icon: BrickWall,
     desc: "Diamond and CBN grinding solutions for manufacturers of engineering ceramics, seals, and precision insulators.",
     image: "/assets/tyrolit/_industries/ceramics.webp",
     imageDir: "ceramics",
@@ -355,7 +356,7 @@ const TYROLIT_INDUSTRIES = [
   {
     industry: "Foundry Industry",
     catalogKey: "Foundry Industry",
-    icon: "🔥",
+    icon: Flame,
     desc: "Metal casting support — from melting iron and steel to mold-finishing of end products.",
     image: "/assets/tyrolit/_industries/foundry.webp",
     imageDir: "foundry",
@@ -672,7 +673,7 @@ function ShellFamilyCard({ item, onClick }: { item: typeof SHELL_FAMILIES[0]; on
 
       <div className="p-5 flex flex-col gap-3 flex-1">
         <div className="flex items-start gap-3">
-          <div className="w-10 h-10 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center text-xl flex-shrink-0">{item.icon}</div>
+          <div className="w-10 h-10 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center flex-shrink-0"><item.icon size={20} aria-hidden="true" /></div>
           <div>
             <h3 className="font-bold text-slate-900 text-base leading-tight mb-1">{item.family.replace(/ – .*/, "")}</h3>
             <p className="text-xs text-slate-500 leading-relaxed">{item.desc}</p>
@@ -716,7 +717,7 @@ function TyrolitIndustryCard({ item, onClick }: { item: typeof TYROLIT_INDUSTRIE
 
       <div className="p-5 flex flex-col gap-3 flex-1">
         <div className="flex items-start gap-3">
-          <div className="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-xl flex-shrink-0">{item.icon}</div>
+          <div className="w-10 h-10 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center flex-shrink-0"><item.icon size={20} aria-hidden="true" /></div>
           <div>
             <h3 className="font-bold text-slate-900 text-base leading-tight mb-1">{item.industry}</h3>
             <p className="text-xs text-slate-500 leading-relaxed">{item.desc}</p>
@@ -929,12 +930,22 @@ export default function Catalog() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 font-sans pt-24 pb-20">
+    <div className="min-h-screen bg-slate-50 font-sans pb-20">
       <SEO 
         title={`${brand === 'shell' ? 'Shell Lubricants' : 'Tyrolit Precision'} Catalog | PJ Enterprise`} 
         description="Browse our comprehensive product catalog for industrial lubricants, machining solutions, and more."
         path="/catalog"
       />
+
+      {/* ── Page header ── */}
+      <section className="bg-slate-900 pt-32 pb-14 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">Product Catalog</h1>
+          <p className="text-lg text-slate-300 max-w-2xl mx-auto">
+            Browse Shell lubricants and Tyrolit precision tools, with technical and safety data sheets for every grade.
+          </p>
+        </div>
+      </section>
 
       {/* ── Brand tabs ── */}
       <div className="bg-white border-b border-slate-200 sticky top-[72px] z-30 shadow-sm">
@@ -987,10 +998,10 @@ export default function Catalog() {
                   All Industries
                 </button>
                 <span className="text-slate-300">/</span>
-                <h1 className="text-2xl font-bold text-slate-900">{activeTyrolitIndustry}</h1>
+                <h2 className="text-2xl font-bold text-slate-900">{activeTyrolitIndustry}</h2>
               </div>
             ) : isShellProductSearch ? (
-              <h1 className="text-2xl font-bold text-slate-900">Shell Lubricants</h1>
+              <h2 className="text-2xl font-bold text-slate-900">Shell Lubricants</h2>
             ) : brand === "shell" && activeShellFamily ? (
               <div className="flex items-center gap-3">
                 <button
@@ -1001,12 +1012,12 @@ export default function Catalog() {
                   All Families
                 </button>
                 <span className="text-slate-300">/</span>
-                <h1 className="text-2xl font-bold text-slate-900">{activeShellFamily.replace(/ – .*/, "")}</h1>
+                <h2 className="text-2xl font-bold text-slate-900">{activeShellFamily.replace(/ – .*/, "")}</h2>
               </div>
             ) : (
-              <h1 className="text-2xl font-bold text-slate-900">
+              <h2 className="text-2xl font-bold text-slate-900">
                 {brand === "shell" ? "Shell Lubricants" : "Tyrolit Solutions"}
-              </h1>
+              </h2>
             )}
             <p className="text-sm text-slate-500 font-medium">
               {brand === "shell"

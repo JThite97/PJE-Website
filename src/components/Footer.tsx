@@ -94,9 +94,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-xs">
+        <div className="pt-8 pb-16 md:pb-0 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-xs">
           <p>&copy; {new Date().getFullYear()} PJ Enterprise. All rights reserved.</p>
-          <div className="mt-4 md:mt-0 space-x-4">
+          <div className="mt-4 md:mt-0 md:pr-20 lg:pr-24 space-x-4">
             <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
